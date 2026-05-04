@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <title>Contract Intelligence & Automation Portfolio | Executive Overview</title><style>
+  <title>Contract Intelligence & Automation Portfolio | Executive Overview</title>
+  <style>
     /* ─── Reset & Base ─────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -34,7 +35,6 @@
     }
 
     html { scroll-behavior: smooth; }
-
     body {
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       background: var(--meta-bg);
@@ -48,13 +48,10 @@
       background: var(--white);
       border-bottom: 1px solid var(--meta-border);
       display: flex; align-items: center; justify-content: space-between;
-      padding: 0 40px;
-      height: 56px;
+      padding: 0 40px; height: 56px;
       box-shadow: var(--shadow-sm);
     }
-    .topnav-brand {
-      display: flex; align-items: center; gap: 10px;
-    }
+    .topnav-brand { display: flex; align-items: center; gap: 10px; }
     .topnav-logo {
       width: 36px; height: 36px;
       background: linear-gradient(135deg, var(--meta-grad-a), var(--meta-grad-b));
@@ -62,178 +59,85 @@
       display: flex; align-items: center; justify-content: center;
     }
     .topnav-logo svg { width: 22px; height: 22px; fill: white; }
-    .topnav-title {
-      font-size: 15px; font-weight: 700; color: var(--meta-dark);
-      letter-spacing: -.2px;
-    }
+    .topnav-title { font-size: 15px; font-weight: 700; color: var(--meta-dark); letter-spacing: -.2px; }
     .topnav-title span { color: var(--meta-blue); }
-    .topnav-date {
-      font-size: 13px; color: var(--meta-muted); font-weight: 500;
-    }
+    .topnav-date { font-size: 13px; color: var(--meta-muted); font-weight: 500; }
 
     /* ─── Hero ──────────────────────────────────────────────────── */
     .hero {
       background: linear-gradient(135deg, #0064D2 0%, #0082FB 45%, #00C6FF 100%);
-      color: white;
-      padding: 64px 40px 56px;
-      position: relative;
-      overflow: hidden;
+      color: white; padding: 64px 40px 56px;
+      position: relative; overflow: hidden;
     }
     .hero::before {
-      content: '';
-      position: absolute; inset: 0;
+      content: ''; position: absolute; inset: 0;
       background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
       pointer-events: none;
     }
     .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; }
     .hero-label {
       display: inline-block;
-      background: rgba(255,255,255,.18);
-      border: 1px solid rgba(255,255,255,.3);
-      border-radius: 20px;
-      padding: 4px 14px;
+      background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.3);
+      border-radius: 20px; padding: 4px 14px;
       font-size: 12px; font-weight: 600; letter-spacing: .6px;
       text-transform: uppercase; margin-bottom: 18px;
     }
-    .hero h1 {
-      font-size: clamp(28px, 4vw, 44px);
-      font-weight: 800; line-height: 1.15;
-      letter-spacing: -.5px; margin-bottom: 12px;
-    }
-    .hero-sub {
-      font-size: 17px; opacity: .88; font-weight: 400; max-width: 560px;
-      line-height: 1.6;
-    }
-    .hero-meta {
-      margin-top: 28px;
-      display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
-    }
-    .hero-meta-item {
-      display: flex; align-items: center; gap: 8px;
-      font-size: 14px; opacity: .85;
-    }
+    .hero h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.15; letter-spacing: -.5px; margin-bottom: 12px; }
+    .hero-sub { font-size: 17px; opacity: .88; font-weight: 400; max-width: 560px; line-height: 1.6; }
+    .hero-meta { margin-top: 28px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .hero-meta-item { display: flex; align-items: center; gap: 8px; font-size: 14px; opacity: .85; }
     .hero-meta-item svg { width: 16px; height: 16px; opacity: .8; }
 
     /* ─── Main Layout ───────────────────────────────────────────── */
     .main { max-width: 1200px; margin: 0 auto; padding: 40px 40px 80px; }
 
     /* ─── Section Title ─────────────────────────────────────────── */
-    .section-header {
-      display: flex; align-items: center; gap: 12px;
-      margin-bottom: 20px; margin-top: 48px;
-    }
+    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; margin-top: 48px; }
     .section-header:first-child { margin-top: 0; }
     .section-icon {
       width: 36px; height: 36px; border-radius: 10px;
       background: linear-gradient(135deg, var(--meta-grad-a), var(--meta-grad-b));
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
     .section-icon svg { width: 18px; height: 18px; fill: white; }
-    .section-header h2 {
-      font-size: 20px; font-weight: 700; color: var(--meta-dark);
-    }
-    .section-header p {
-      font-size: 13px; color: var(--meta-muted); margin-top: 2px;
-    }
+    .section-header h2 { font-size: 20px; font-weight: 700; color: var(--meta-dark); }
+    .section-header p { font-size: 13px; color: var(--meta-muted); margin-top: 2px; }
 
     /* ─── KPI Cards ─────────────────────────────────────────────── */
-    .kpi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 16px;
-      margin-bottom: 8px;
-    }
+    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 8px; }
     .kpi-card {
-      background: var(--white);
-      border-radius: var(--radius-md);
-      padding: 22px 20px;
-      box-shadow: var(--shadow-sm);
+      background: var(--white); border-radius: var(--radius-md);
+      padding: 22px 20px; box-shadow: var(--shadow-sm);
       border: 1px solid var(--meta-border);
-      transition: transform var(--transition), box-shadow var(--transition);
-      cursor: default;
+      transition: transform var(--transition), box-shadow var(--transition); cursor: default;
     }
-    .kpi-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-md);
-    }
-    .kpi-label {
-      font-size: 12px; font-weight: 600; text-transform: uppercase;
-      letter-spacing: .5px; color: var(--meta-muted); margin-bottom: 10px;
-    }
-    .kpi-value {
-      font-size: 38px; font-weight: 800; line-height: 1;
-      background: linear-gradient(135deg, var(--meta-grad-a), var(--meta-grad-b));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .kpi-sub {
-      font-size: 12px; color: var(--meta-muted); margin-top: 6px;
-    }
-    .kpi-dot {
-      display: inline-block; width: 8px; height: 8px; border-radius: 50%;
-      margin-right: 5px; vertical-align: middle;
-    }
+    .kpi-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .kpi-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; color: var(--meta-muted); margin-bottom: 10px; }
+    .kpi-value { font-size: 38px; font-weight: 800; line-height: 1; background: linear-gradient(135deg, var(--meta-grad-a), var(--meta-grad-b)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .kpi-sub { font-size: 12px; color: var(--meta-muted); margin-top: 6px; }
+    .kpi-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
 
-     /* ─── Filter Bar ──────────────────────────────────────────── */
-    .filter-bar {
-      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-      margin-bottom: 24px; margin-top: 8px;
-    }
-    .filter-group {
-      display: flex; flex-direction: column; gap: 10px;
-      margin-bottom: 28px; margin-top: 8px;
-      background: #fff; border-radius: 14px;
-      padding: 16px 20px; box-shadow: 0 1px 6px rgba(0,0,0,.06);
-    }
-    .filter-row {
-      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
-    }
-    .filter-label {
-      font-size: 11px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .6px; color: var(--meta-muted);
-      min-width: 80px;
-    }
-    .filter-btn {
-      padding: 7px 16px; border-radius: 20px;
-      border: 1.5px solid var(--meta-border);
-      background: var(--white); color: var(--meta-muted);
-      font-size: 13px; font-weight: 600; cursor: pointer;
-      transition: all var(--transition);
-    }
-    .filter-btn:hover, .filter-btn.active {
-      background: var(--meta-blue); color: white;
-      border-color: var(--meta-blue);
-    }
+    /* ─── Filter Bar ──────────────────────────────────────────── */
+    .filter-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; margin-top: 8px; background: #fff; border-radius: 14px; padding: 16px 20px; box-shadow: 0 1px 6px rgba(0,0,0,.06); }
+    .filter-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .filter-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--meta-muted); min-width: 80px; }
+    .filter-btn { padding: 7px 16px; border-radius: 20px; border: 1.5px solid var(--meta-border); background: var(--white); color: var(--meta-muted); font-size: 13px; font-weight: 600; cursor: pointer; transition: all var(--transition); }
+    .filter-btn:hover, .filter-btn.active { background: var(--meta-blue); color: white; border-color: var(--meta-blue); }
 
     /* ─── Project Cards Grid ────────────────────────────────────── */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 20px;
-    }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; }
 
     /* ─── Project Card ──────────────────────────────────────────── */
     .project-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--meta-border);
-      overflow: hidden;
-      transition: transform var(--transition), box-shadow var(--transition);
-      cursor: pointer;
-      display: flex; flex-direction: column;
+      background: var(--white); border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm); border: 1px solid var(--meta-border);
+      overflow: hidden; transition: transform var(--transition), box-shadow var(--transition);
+      cursor: pointer; display: flex; flex-direction: column;
     }
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-    }
+    .project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .project-card.hidden { display: none; }
 
-    .card-accent {
-      height: 5px;
-      background: linear-gradient(90deg, var(--meta-grad-a), var(--meta-grad-b));
-    }
+    .card-accent { height: 5px; background: linear-gradient(90deg, var(--meta-grad-a), var(--meta-grad-b)); }
     .card-accent.complete   { background: var(--status-complete); }
     .card-accent.launching  { background: linear-gradient(90deg, var(--meta-blue), var(--meta-grad-b)); }
     .card-accent.progress   { background: linear-gradient(90deg, #F5A623, #FFD166); }
@@ -241,30 +145,14 @@
 
     .card-body { padding: 22px 22px 18px; flex: 1; display: flex; flex-direction: column; }
     .card-body .card-impact { flex: 1; }
-    .card-body .pipeline-list { flex: 1; }
     .card-body .progress-section { margin-top: auto; padding-top: 20px; }
 
-    .card-header {
-      display: flex; align-items: flex-start;
-      justify-content: space-between; gap: 12px; margin-bottom: 14px;
-    }
-    .card-category {
-      font-size: 11px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .6px; color: var(--meta-blue); margin-bottom: 5px;
-    }
-    .card-title {
-      font-size: 17px; font-weight: 700; color: var(--meta-dark);
-      line-height: 1.3;
-    }
-    .status-badge {
-      flex-shrink: 0;
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 4px 11px; border-radius: 20px;
-      font-size: 11px; font-weight: 700; white-space: nowrap;
-    }
-    .status-badge .dot {
-      width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
-    }
+    .card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+    .card-category { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--meta-blue); margin-bottom: 5px; }
+    .card-title { font-size: 17px; font-weight: 700; color: var(--meta-dark); line-height: 1.3; }
+
+    .status-badge { flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px; padding: 4px 11px; border-radius: 20px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+    .status-badge .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
     .badge-complete  { background: #E8F9EE; color: #1A8C3A; }
     .badge-complete .dot  { background: var(--status-complete); }
     .badge-launching { background: #E7F3FF; color: #0064D2; }
@@ -279,245 +167,84 @@
       50%       { opacity: .5; transform: scale(1.4); }
     }
 
-    .card-impact-label {
-      font-size: 11px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .5px; color: var(--meta-muted); margin-bottom: 6px;
-    }
-    .card-impact {
-      font-size: 14px; color: var(--meta-mid); line-height: 1.6;
-    }
+    .card-impact-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--meta-muted); margin-bottom: 6px; }
+    .card-impact { font-size: 14px; color: var(--meta-mid); line-height: 1.6; }
 
-    .card-footer {
-      padding: 14px 22px;
-      border-top: 1px solid var(--meta-border);
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .card-tag {
-      display: inline-flex; align-items: center; gap: 5px;
-      background: var(--meta-bg); border-radius: 6px;
-      padding: 4px 10px; font-size: 12px; font-weight: 600;
-      color: var(--meta-muted);
-    }
-    .card-tag svg { width: 12px; height: 12px; }
-    .card-expand-btn {
-      font-size: 12px; font-weight: 600; color: var(--meta-blue);
-      background: none; border: none; cursor: pointer;
-      display: flex; align-items: center; gap: 4px;
-      transition: opacity var(--transition);
-    }
+    .card-footer { padding: 14px 22px; border-top: 1px solid var(--meta-border); display: flex; align-items: center; justify-content: space-between; }
+    .card-tag { display: inline-flex; align-items: center; gap: 5px; background: var(--meta-bg); border-radius: 6px; padding: 4px 10px; font-size: 12px; font-weight: 600; color: var(--meta-muted); }
+    .card-expand-btn { font-size: 12px; font-weight: 600; color: var(--meta-blue); background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 4px; transition: opacity var(--transition); }
     .card-expand-btn:hover { opacity: .7; }
 
-    /* ─── Pipeline Build List ──────────────────────────────────── */
-    .pipeline-list {
-      list-style: none; margin-top: 12px; display: flex; flex-direction: column; gap: 7px;
-    }
-    .pipeline-list li {
-      display: flex; align-items: flex-start; gap: 8px;
-      font-size: 13px; color: var(--meta-mid); line-height: 1.45;
-    }
-    .pipeline-list li::before {
-      content: '';
-      display: inline-block; width: 6px; height: 6px; border-radius: 50%;
-      background: var(--meta-blue); flex-shrink: 0; margin-top: 5px;
-    }
-    .pipeline-list li strong { color: var(--meta-dark); font-weight: 700; }
-    .pipeline-badge-row {
-      display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;
-    }
-    .pipeline-badge {
-      background: var(--meta-bg); border: 1px solid var(--meta-border);
-      border-radius: 6px; padding: 3px 10px;
-      font-size: 11px; font-weight: 600; color: var(--meta-muted);
-    }
-    /* Modal pipeline list */
-    .modal-pipeline-list {
-      list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 4px;
-    }
-    .modal-pipeline-list li {
-      background: var(--meta-bg); border-radius: var(--radius-sm);
-      padding: 10px 14px; font-size: 14px; color: var(--meta-mid); line-height: 1.5;
-      border-left: 3px solid var(--meta-blue);
-    }
-    .modal-pipeline-list li strong { color: var(--meta-dark); display: block; margin-bottom: 2px; }
-
-    /* ─── Modal / Drawer ────────────────────────────────────────────── */ .modal-overlay {
-      position: fixed; inset: 0; z-index: 200;
-      background: rgba(0,0,0,.45);
-      display: flex; align-items: center; justify-content: center;
-      padding: 24px;
-      opacity: 0; pointer-events: none;
-      transition: opacity var(--transition);
-    }
+    /* ─── Modal ─────────────────────────────────────────────────── */
+    .modal-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,.45); display: flex; align-items: center; justify-content: center; padding: 24px; opacity: 0; pointer-events: none; transition: opacity var(--transition); }
     .modal-overlay.open { opacity: 1; pointer-events: all; }
-
-    .modal {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      max-width: 560px; width: 100%;
-      box-shadow: var(--shadow-lg);
-      overflow: hidden;
-      transform: translateY(20px) scale(.97);
-      transition: transform var(--transition);
-    }
+    .modal { background: var(--white); border-radius: var(--radius-lg); max-width: 560px; width: 100%; box-shadow: var(--shadow-lg); overflow: hidden; transform: translateY(20px) scale(.97); transition: transform var(--transition); }
     .modal-overlay.open .modal { transform: translateY(0) scale(1); }
-
-    .modal-header {
-      padding: 24px 24px 16px;
-      border-bottom: 1px solid var(--meta-border);
-      display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
-    }
-    .modal-header-left .modal-category {
-      font-size: 11px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .6px; color: var(--meta-blue); margin-bottom: 4px;
-    }
-    .modal-header-left h3 {
-      font-size: 20px; font-weight: 800; color: var(--meta-dark);
-    }
-    .modal-close {
-      width: 32px; height: 32px; border-radius: 50%;
-      background: var(--meta-bg); border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; transition: background var(--transition);
-    }
+    .modal-header { padding: 24px 24px 16px; border-bottom: 1px solid var(--meta-border); display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .modal-header-left .modal-category { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--meta-blue); margin-bottom: 4px; }
+    .modal-header-left h3 { font-size: 20px; font-weight: 800; color: var(--meta-dark); }
+    .modal-close { width: 32px; height: 32px; border-radius: 50%; background: var(--meta-bg); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background var(--transition); }
     .modal-close:hover { background: var(--meta-border); }
     .modal-close svg { width: 16px; height: 16px; }
-
     .modal-body { padding: 20px 24px 24px; }
-    .modal-section-title {
-      font-size: 12px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .5px; color: var(--meta-muted); margin-bottom: 8px;
-    }
-    .modal-impact {
-      font-size: 15px; color: var(--meta-mid); line-height: 1.7;
-      margin-bottom: 20px;
-    }
-    .modal-meta-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
-    }
-    .modal-meta-item {
-      background: var(--meta-bg); border-radius: var(--radius-sm);
-      padding: 12px 14px;
-    }
-    .modal-meta-item .label {
-      font-size: 11px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .5px; color: var(--meta-muted); margin-bottom: 4px;
-    }
-    .modal-meta-item .value {
-      font-size: 14px; font-weight: 600; color: var(--meta-dark);
-    }
+    .modal-section-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--meta-muted); margin-bottom: 8px; }
+    .modal-impact { font-size: 15px; color: var(--meta-mid); line-height: 1.7; margin-bottom: 20px; }
+    .modal-meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .modal-meta-item { background: var(--meta-bg); border-radius: var(--radius-sm); padding: 12px 14px; }
+    .modal-meta-item .label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--meta-muted); margin-bottom: 4px; }
+    .modal-meta-item .value { font-size: 14px; font-weight: 600; color: var(--meta-dark); }
 
     /* ─── Progress Bar ──────────────────────────────────────────── */
     .progress-section { }
-    .progress-label {
-      display: flex; justify-content: space-between;
-      font-size: 12px; font-weight: 600; color: var(--meta-muted);
-      margin-bottom: 6px;
-    }
-    .progress-track {
-      height: 8px; background: var(--meta-bg); border-radius: 4px; overflow: hidden;
-    }
-    .progress-fill {
-      height: 100%; border-radius: 4px;
-      background: linear-gradient(90deg, var(--meta-grad-a), var(--meta-grad-b));
-      transition: width .8s cubic-bezier(.4,0,.2,1);
-    }
+    .progress-label { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; color: var(--meta-muted); margin-bottom: 6px; }
+    .progress-track { height: 8px; background: var(--meta-bg); border-radius: 4px; overflow: hidden; }
+    .progress-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--meta-grad-a), var(--meta-grad-b)); transition: width .8s cubic-bezier(.4,0,.2,1); }
     .progress-fill.complete  { background: var(--status-complete); }
     .progress-fill.launching { background: linear-gradient(90deg, var(--meta-blue), var(--meta-grad-b)); }
     .progress-fill.progress  { background: linear-gradient(90deg, #F5A623, #FFD166); }
     .progress-fill.reqs      { background: var(--status-reqs); }
 
+    /* ─── Loading State ─────────────────────────────────────────── */
+    .loading-state { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 40px; gap: 16px; }
+    .loading-spinner { width: 40px; height: 40px; border: 3px solid var(--meta-border); border-top-color: var(--meta-blue); border-radius: 50%; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loading-text { font-size: 14px; color: var(--meta-muted); font-weight: 500; }
+
     /* ─── Blocker Section ──────────────────────────────────────── */
-    .blocker-section {
-      margin-top: 48px;
-    }
-    .blocker-banner {
-      background: linear-gradient(135deg, #FFF3E0, #FFF8F0);
-      border: 1.5px solid #F5A623;
-      border-left: 5px solid #F5A623;
-      border-radius: var(--radius-md);
-      padding: 24px 28px;
-      margin-bottom: 16px;
-      display: flex; align-items: flex-start; gap: 18px;
-    }
-    .blocker-icon {
-      width: 44px; height: 44px; border-radius: 12px;
-      background: linear-gradient(135deg, #F5A623, #FFD166);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
+    .blocker-section { margin-top: 48px; }
+    .blocker-banner { background: linear-gradient(135deg, #FFF3E0, #FFF8F0); border: 1.5px solid #F5A623; border-left: 5px solid #F5A623; border-radius: var(--radius-md); padding: 24px 28px; margin-bottom: 16px; display: flex; align-items: flex-start; gap: 18px; }
+    .blocker-icon { width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, #F5A623, #FFD166); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .blocker-icon svg { width: 22px; height: 22px; fill: white; }
-    .blocker-content {}
-    .blocker-title {
-      font-size: 16px; font-weight: 800; color: #7A4F00;
-      margin-bottom: 6px;
-    }
-    .blocker-desc {
-      font-size: 14px; color: #5C3D00; line-height: 1.65;
-    }
+    .blocker-title { font-size: 16px; font-weight: 800; color: #7A4F00; margin-bottom: 6px; }
+    .blocker-desc { font-size: 14px; color: #5C3D00; line-height: 1.65; }
     .blocker-desc strong { color: #7A4F00; }
-    .blocker-tags {
-      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px;
-    }
-    .blocker-tag {
-      background: rgba(245,166,35,.15); border: 1px solid rgba(245,166,35,.4);
-      border-radius: 6px; padding: 4px 12px;
-      font-size: 12px; font-weight: 600; color: #7A4F00;
-    }
-    .risk-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-    }
-    .risk-card {
-      background: var(--white);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--meta-border);
-      border-top: 4px solid #F5A623;
-      padding: 20px;
-      box-shadow: var(--shadow-sm);
-    }
-    .risk-card-title {
-      font-size: 14px; font-weight: 700; color: var(--meta-dark);
-      margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
-    }
+    .blocker-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .blocker-tag { background: rgba(245,166,35,.15); border: 1px solid rgba(245,166,35,.4); border-radius: 6px; padding: 4px 12px; font-size: 12px; font-weight: 600; color: #7A4F00; }
+    .risk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .risk-card { background: var(--white); border-radius: var(--radius-md); border: 1px solid var(--meta-border); border-top: 4px solid #F5A623; padding: 20px; box-shadow: var(--shadow-sm); }
+    .risk-card-title { font-size: 14px; font-weight: 700; color: var(--meta-dark); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
     .risk-card-title svg { width: 16px; height: 16px; flex-shrink: 0; }
-    .risk-card-body {
-      font-size: 13px; color: var(--meta-muted); line-height: 1.6;
-    }
-    .risk-severity {
-      display: inline-block; margin-top: 10px;
-      padding: 3px 10px; border-radius: 20px;
-      font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .4px;
-    }
+    .risk-card-body { font-size: 13px; color: var(--meta-muted); line-height: 1.6; }
+    .risk-severity { display: inline-block; margin-top: 10px; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .4px; }
     .severity-high   { background: #FEECEC; color: #C0392B; }
     .severity-medium { background: #FFF4E0; color: #B07200; }
 
+    /* ─── Sheet Link Banner ─────────────────────────────────────── */
+    .sheet-banner { background: linear-gradient(135deg, #E7F3FF, #F0F8FF); border: 1.5px solid var(--meta-blue); border-left: 5px solid var(--meta-blue); border-radius: var(--radius-md); padding: 16px 22px; margin-bottom: 28px; display: flex; align-items: center; gap: 14px; }
+    .sheet-banner-icon { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--meta-grad-a), var(--meta-grad-b)); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .sheet-banner-icon svg { width: 18px; height: 18px; fill: white; }
+    .sheet-banner-text { font-size: 13px; color: #0064D2; line-height: 1.5; }
+    .sheet-banner-text strong { font-weight: 700; }
+    .sheet-banner-text a { color: var(--meta-blue); font-weight: 600; }
+
     /* ─── Legend ────────────────────────────────────────────────── */
-    .legend {
-      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
-      background: var(--white); border-radius: var(--radius-md);
-      padding: 14px 20px; box-shadow: var(--shadow-sm);
-      border: 1px solid var(--meta-border); margin-top: 32px;
-    }
-    .legend-title {
-      font-size: 12px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .5px; color: var(--meta-muted); margin-right: 4px;
-    }
-    .legend-item {
-      display: flex; align-items: center; gap: 6px;
-      font-size: 13px; font-weight: 500; color: var(--meta-mid);
-    }
-    .legend-dot {
-      width: 10px; height: 10px; border-radius: 50%;
-    }
+    .legend { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; background: var(--white); border-radius: var(--radius-md); padding: 14px 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--meta-border); margin-top: 32px; }
+    .legend-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--meta-muted); margin-right: 4px; }
+    .legend-item { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: var(--meta-mid); }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
 
     /* ─── Footer ────────────────────────────────────────────────── */
-    .footer {
-      text-align: center; padding: 24px 40px;
-      font-size: 12px; color: var(--meta-muted);
-      border-top: 1px solid var(--meta-border);
-      background: var(--white);
-    }
+    .footer { text-align: center; padding: 24px 40px; font-size: 12px; color: var(--meta-muted); border-top: 1px solid var(--meta-border); background: var(--white); }
     .footer strong { color: var(--meta-blue); }
 
     /* ─── Responsive ────────────────────────────────────────────── */
@@ -533,50 +260,39 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     TOP NAV
-════════════════════════════════════════════════════════════════ -->
+<!-- ═══ TOP NAV ══════════════════════════════════════════════════ -->
 <nav class="topnav">
   <div class="topnav-brand">
     <div class="topnav-logo">
-      <!-- Meta "M" wordmark simplified -->
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M2 6.5C2 4.015 4.015 2 6.5 2S11 4.015 11 6.5v11C11 19.985 8.985 22 6.5 22S2 19.985 2 17.5v-11zm11 0C13 4.015 15.015 2 17.5 2S22 4.015 22 6.5v11C22 19.985 19.985 22 17.5 22S13 19.985 13 17.5v-11z"/>
       </svg>
     </div>
     <span class="topnav-title">Contract <span>Intelligence</span></span>
   </div>
-  <span class="topnav-date">Executive Overview &nbsp;·&nbsp; April 2026</span>
+  <span class="topnav-date">Executive Overview &nbsp;·&nbsp; <span id="navDate">April 2026</span></span>
 </nav>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     HERO
-════════════════════════════════════════════════════════════════ -->
+<!-- ═══ HERO ══════════════════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-label">Executive Overview</div>
-    <h1>Contract Intelligence
-&amp; Automation Portfolio</h1>
-    <p class="hero-sub">
-      A consolidated view of active initiatives driving contract intelligence, systems integration, and AI-powered workflow automation across Legal.
-    </p>
+    <h1>Contract Intelligence<br>&amp; Automation Portfolio</h1>
+    <p class="hero-sub">A consolidated view of active initiatives driving contract intelligence, systems integration, and AI-powered workflow automation across Legal.</p>
     <div class="hero-meta">
       <div class="hero-meta-item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        April 2026
+        <span id="heroDate">April 2026</span>
       </div>
-
       <div class="hero-meta-item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        18 Projects Tracked
+        <span id="heroCount">Loading...</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     MAIN
-════════════════════════════════════════════════════════════════ -->
+<!-- ═══ MAIN ══════════════════════════════════════════════════════ -->
 <main class="main">
 
   <!-- KPI Summary -->
@@ -589,34 +305,11 @@
       <p>Current status distribution across all active projects</p>
     </div>
   </div>
-
-  <div class="kpi-grid">
-    <div class="kpi-card">
-      <div class="kpi-label">Total Projects</div>
-      <div class="kpi-value">18</div>
-      <div class="kpi-sub">Across all workstreams</div>
+  <div class="kpi-grid" id="kpiGrid">
+    <div class="loading-state" style="grid-column:1/-1; padding:40px">
+      <div class="loading-spinner"></div>
+      <div class="loading-text">Loading portfolio data…</div>
     </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Complete</div>
-      <div class="kpi-value" style="background: linear-gradient(135deg,#23C552,#4ADE80); -webkit-background-clip:text; background-clip:text;">2</div>
-      <div class="kpi-sub"><span class="kpi-dot" style="background:var(--status-complete)"></span>Adobe Sign Migration, Lien &amp; Levy</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Launching</div>
-      <div class="kpi-value" style="background: linear-gradient(135deg,#0082FB,#00C6FF); -webkit-background-clip:text; background-clip:text;">2</div>
-      <div class="kpi-sub"><span class="kpi-dot" style="background:var(--meta-blue)"></span>SSIP &amp; Music Licensing</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">In Progress</div>
-      <div class="kpi-value" style="background: linear-gradient(135deg,#F5A623,#FFD166); -webkit-background-clip:text; background-clip:text;">9</div>
-      <div class="kpi-sub"><span class="kpi-dot" style="background:var(--status-progress)"></span>PATE, IVO, MRA, BoS, CWX, Adobe &times;2, Cases &times;2</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Requirements</div>
-      <div class="kpi-value" style="background: linear-gradient(135deg,#9E9E9E,#BDBDBD); -webkit-background-clip:text; background-clip:text;">7</div>
-      <div class="kpi-sub"><span class="kpi-dot" style="background:var(--status-reqs)"></span>IDC, MRS, AI Workflows, AI Data, Terms Hub, AI Hub</div>
-    </div>
-
   </div>
 
   <!-- Filter Bar -->
@@ -627,6 +320,16 @@
     <div>
       <h2>Project Portfolio</h2>
       <p>Click any card to view full details &nbsp;·&nbsp; Filter by status or workstream below</p>
+    </div>
+  </div>
+
+  <!-- Sheet Banner -->
+  <div class="sheet-banner" id="sheetBanner" style="display:none">
+    <div class="sheet-banner-icon">
+      <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+    </div>
+    <div class="sheet-banner-text">
+      <strong>Live Data</strong> — This dashboard reads directly from a Google Sheet. To update any project, simply edit the sheet and refresh this page. <a id="sheetLink" href="#" target="_blank">Open Google Sheet ↗</a>
     </div>
   </div>
 
@@ -649,488 +352,15 @@
     </div>
   </div>
 
-  <!-- Project Cards -->
+  <!-- Project Cards Grid -->
   <div class="projects-grid" id="projectsGrid">
-
-    <!-- ══ ADOBE SIGN ══════════════════════════════════════════════ -->
-
-    <!-- ── Adobe Sign Migration ── -->
-    <div class="project-card" data-status="complete" data-workstream="adobe-sign" data-modal="modal-adobe">
-      <div class="card-accent complete"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Infrastructure / Tooling</div>
-            <div class="card-title">Adobe Sign Migration</div>
-          </div>
-          <span class="status-badge badge-complete"><span class="dot"></span>Complete</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Successfully migrated the Adobe Sign environment from the Legacy platform to the Adobe Admin Console — Adobe's current standard for managing licenses across all Adobe products — modernizing how access is provisioned without changing how Adobe Sign functions for end users.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>100%</span></div>
-          <div class="progress-track"><div class="progress-fill complete" style="width:100%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Infrastructure</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
+    <div class="loading-state" style="grid-column:1/-1">
+      <div class="loading-spinner"></div>
+      <div class="loading-text">Loading projects…</div>
     </div>
+  </div>
 
-    <!-- ── Adobe Sign Ownership Migration ── -->
-    <div class="project-card" data-status="progress" data-workstream="adobe-sign" data-modal="modal-adobe-ownership">
-      <div class="card-accent progress"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Adobe Sign</div>
-            <div class="card-title">Adobe Sign Ownership Migration</div>
-          </div>
-          <span class="status-badge badge-progress"><span class="dot"></span>In Progress</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Transitions company-wide Adobe Sign ownership from Legal Technology to EP/EE, allowing Legal to refocus support on Legal-specific needs rather than provisioning and supporting all departments.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>25%</span></div>
-          <div class="progress-track"><div class="progress-fill progress" style="width:25%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Adobe Sign</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-    <!-- ── Ongoing Adobe Sign Support ── -->
-    <div class="project-card" data-status="progress" data-workstream="adobe-sign" data-modal="modal-adobe-support">
-      <div class="card-accent progress"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Adobe Sign</div>
-            <div class="card-title">Ongoing Adobe Sign Support</div>
-          </div>
-          <span class="status-badge badge-progress"><span class="dot"></span>Ongoing</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Maintains company-wide Adobe Sign operations including provisioning, Exemption process management, bug resolution, integration support, permission management, and engineering policy compliance.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>100%</span></div>
-          <div class="progress-track"><div class="progress-fill complete" style="width:100%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Adobe Sign</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-    <!-- ══ CONTRACTS HUB ════════════════════════════════════════════ -->
-
-    <!-- ── SSIP Translations ── -->
-    <div class="project-card" data-status="launching" data-workstream="contracts-hub" data-modal="modal-ssip">
-      <div class="card-accent launching"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Contracts Hub</div>
-            <div class="card-title">SSIP Translations</div>
-          </div>
-          <span class="status-badge badge-launching"><span class="dot"></span>Launching</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Automates the full drafting, routing, and execution of 16 IP Agreement workflows across 10 languages — enabling global IP contracting at scale with zero manual translation overhead.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>90%</span></div>
-          <div class="progress-track"><div class="progress-fill launching" style="width:90%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Contracts Hub</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-    <!-- ── Music Licensing ── -->
-    <div class="project-card" data-status="launching" data-workstream="contracts-hub" data-modal="modal-music">
-      <div class="card-accent launching"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Contracts Hub</div>
-            <div class="card-title">Music Licensing</div>
-          </div>
-          <span class="status-badge badge-launching"><span class="dot"></span>Launching</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Streamlines intake and lifecycle management of music licensing agreements, reducing bottlenecks in content clearance workflows and accelerating time-to-market for creative projects.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>88%</span></div>
-          <div class="progress-track"><div class="progress-fill launching" style="width:88%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Contracts Hub</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-    <!-- ── PATE Integration ── -->
-    <div class="project-card" data-status="progress" data-workstream="contracts-hub ai-projects" data-modal="modal-pate">
-      <div class="card-accent progress"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Contracts Hub</div>
-            <div class="card-title">PATE Integration</div>
-          </div>
-          <span class="status-badge badge-progress"><span class="dot"></span>Build in Progress</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Connects PATE — the IP Team's AI generative tool — to Contracts Hub, enabling fully AI-generated IP Licensing agreements to flow seamlessly into compliance, routing, and execution workflows.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>55%</span></div>
-          <div class="progress-track"><div class="progress-fill progress" style="width:55%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Contracts Hub</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-    <!-- ── IVO Integration ── -->
-    <div class="project-card" data-status="progress" data-workstream="contracts-hub ai-projects" data-modal="modal-ivo">
-      <div class="card-accent progress"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Systems Integration</div>
-            <div class="card-title">IVO Integration with Contracts Hub</div>
-          </div>
-          <span class="status-badge badge-progress"><span class="dot"></span>In Progress</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Embeds IVO's AI drafting intelligence — clause libraries, risk scoring, and contract comparison — directly into Contracts Hub for custom agreement drafting and redlining before routing.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>45%</span></div>
-          <div class="progress-track"><div class="progress-fill progress" style="width:45%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Integration</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-    <!-- ── IDC / Leasing ── -->
-    <div class="project-card" data-status="reqs" data-workstream="contracts-hub" data-modal="modal-idc">
-      <div class="card-accent reqs"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Contracts Hub</div>
-            <div class="card-title">IDC / Leasing Agreements — Data Centers</div>
-          </div>
-          <span class="status-badge badge-reqs"><span class="dot"></span>Requirements</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Centralizes management of data center leasing and infrastructure contracts, providing visibility into obligations, renewal timelines, and cost exposure across the global data center portfolio.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>20%</span></div>
-          <div class="progress-track"><div class="progress-fill reqs" style="width:20%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Contracts Hub</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-    <!-- ── MRS Agreements ── -->
-    <div class="project-card" data-status="reqs" data-workstream="contracts-hub" data-modal="modal-mrs">
-      <div class="card-accent reqs"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Contracts Hub</div>
-            <div class="card-title">MRS Agreements — Hardware Dev &amp; Supply</div>
-          </div>
-          <span class="status-badge badge-reqs"><span class="dot"></span>Requirements</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Brings hardware development and supply agreements into a unified contract management framework, enabling proactive risk management and supplier compliance tracking at scale.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>20%</span></div>
-          <div class="progress-track"><div class="progress-fill reqs" style="width:20%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Contracts Hub</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-    <!-- ── MRA & SOW Amendments ── -->
-    <div class="project-card" data-status="progress" data-workstream="contracts-hub" data-modal="modal-mra">
-      <div class="card-accent progress"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Contracts Hub</div>
-            <div class="card-title">MRA &amp; SOW Amendments</div>
-          </div>
-          <span class="status-badge badge-progress"><span class="dot"></span>In Progress</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Enhances existing Master Retention Agreement and Statement of Work workflows for Outside Counsel engagements at Meta, adding amendment support to enable modifications to executed agreements without requiring full re-execution.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>40%</span></div>
-          <div class="progress-track"><div class="progress-fill progress" style="width:40%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Contracts Hub</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-    <!-- ── Bill of Sale ── -->
-    <div class="project-card" data-status="progress" data-workstream="contracts-hub" data-modal="modal-bos">
-      <div class="card-accent progress"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Contracts Hub</div>
-            <div class="card-title">Bill of Sale Workflow</div>
-          </div>
-          <span class="status-badge badge-progress"><span class="dot"></span>In Progress</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          New end-to-end Contracts Hub workflow for bill of sale transactions, covering intake, drafting, approval routing, and execution to standardize and accelerate asset transfer agreements.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>35%</span></div>
-          <div class="progress-track"><div class="progress-fill progress" style="width:35%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Contracts Hub</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-    <!-- ── CWX Migration ── -->
-    <div class="project-card" data-status="progress" data-workstream="contracts-hub" data-modal="modal-cwx">
-      <div class="card-accent progress"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Contracts Hub</div>
-            <div class="card-title">CWX Migration (Buy@)</div>
-          </div>
-          <span class="status-badge badge-progress"><span class="dot"></span>In Progress</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Migrates the high-volume CWX contingent worker agreement workflow out of Buy@ and into Contracts Hub, spanning Legal, Sourcing, and the People Team for unified management and compliance.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>30%</span></div>
-          <div class="progress-track"><div class="progress-fill progress" style="width:30%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Contracts Hub</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-    <!-- ── AI Data Acquisitions ── -->
-    <div class="project-card" data-status="reqs" data-workstream="contracts-hub ai-projects" data-modal="modal-ai-data">
-      <div class="card-accent reqs"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Contracts Hub</div>
-            <div class="card-title">AI Data Acquisitions Workflow</div>
-          </div>
-          <span class="status-badge badge-reqs"><span class="dot"></span>Requirements</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Purpose-built workflow for AI data acquisition agreements, supporting the growing volume of data licensing and acquisition activity tied to Meta's AI development initiatives.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>15%</span></div>
-          <div class="progress-track"><div class="progress-fill reqs" style="width:15%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Contracts Hub</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-    <!-- ── Terms Hub ── -->
-    <div class="project-card" data-status="reqs" data-workstream="contracts-hub" data-modal="modal-terms-hub">
-      <div class="card-accent reqs"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Contracts Hub</div>
-            <div class="card-title">Terms Hub</div>
-          </div>
-          <span class="status-badge badge-reqs"><span class="dot"></span>Requirements</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          A new Contracts Hub module for managing all public-facing Meta terms and policies — automating approvals, maintaining a term library, and pushing approved updates directly to CMS for live web page deployment.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>10%</span></div>
-          <div class="progress-track"><div class="progress-fill reqs" style="width:10%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Contracts Hub</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-    <!-- ── AI-Generated Hub Workflow Building ── -->
-    <div class="project-card" data-status="reqs" data-workstream="contracts-hub ai-projects" data-modal="modal-ai-workflow">
-      <div class="card-accent reqs"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">AI &amp; Innovation</div>
-            <div class="card-title">AI-Generated Hub Workflow Building</div>
-          </div>
-          <span class="status-badge badge-reqs"><span class="dot"></span>Requirements / Mock-Ups</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Leverages AI to auto-generate contract workflow templates and routing logic, dramatically reducing time-to-launch for new contract processes and positioning Legal Technology as a leader in AI-driven operational innovation.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>15%</span></div>
-          <div class="progress-track"><div class="progress-fill reqs" style="width:15%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">AI &amp; Innovation</span>
-        <button class="card-expand-btn">Details &rsaquo;</button>
-      </div>
-    </div>
-
-    <!-- ══ CASES ════════════════════════════════════════════════════ -->
-
-    <!-- ── Legal Payments & Settlements ── -->
-    <div class="project-card" data-status="progress" data-workstream="cases" data-modal="modal-cases-1">
-      <div class="card-accent progress"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Cases</div>
-            <div class="card-title">Legal Payments &amp; Settlements</div>
-          </div>
-          <span class="status-badge badge-progress"><span class="dot"></span>In Progress</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Centralizes, standardizes, and automates the management of legal payments and settlements directed toward Meta and its affiliates, supporting regulatory compliance, financial integrity, and operational efficiency.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>50%</span></div>
-          <div class="progress-track"><div class="progress-fill progress" style="width:50%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Cases</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-    <!-- ── CAIA Feedback - Compliance Hub ── -->
-    <div class="project-card" data-status="progress" data-workstream="cases ai" data-modal="modal-cases-2">
-      <div class="card-accent progress"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Cases</div>
-            <div class="card-title">CAIA Feedback — Compliance Hub</div>
-          </div>
-          <span class="status-badge badge-progress"><span class="dot"></span>In Progress</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Integrates the CAIA AI chatbot with Cases to extract compliance feedback from Compliance Hub and transform it into actionable items within Cases &amp; GSD, streamlining compliance workflows and accelerating issue resolution.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>50%</span></div>
-          <div class="progress-track"><div class="progress-fill progress" style="width:50%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Cases</span>
-        <span class="card-tag">AI</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-    <!-- ── Lien & Levy - RFI ── -->
-    <div class="project-card" data-status="complete" data-workstream="cases" data-modal="modal-cases-3">
-      <div class="card-accent complete"></div>
-      <div class="card-body">
-        <div class="card-header">
-          <div>
-            <div class="card-category">Cases</div>
-            <div class="card-title">Lien &amp; Levy — RFI</div>
-          </div>
-          <span class="status-badge badge-complete"><span class="dot"></span>Complete</span>
-        </div>
-        <div class="card-impact-label">Business Impact</div>
-        <div class="card-impact">
-          Integrates the Liens &amp; Levies Cases program with the Legal Workflow Management (LWM) system to enable standardized RFI creation directly from Cases, improving efficiency and compliance of the Liens &amp; Levies workflow.
-        </div>
-        <div class="progress-section">
-          <div class="progress-label"><span>Progress</span><span>100%</span></div>
-          <div class="progress-track"><div class="progress-fill complete" style="width:100%"></div></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Cases</span>
-        <button class="card-expand-btn">Details ›</button>
-      </div>
-    </div>
-
-
-  </div><!-- /projects-grid -->
-
-  <!-- ═══ BLOCKERS & RISKS ════════════════════════════════════ -->
+  <!-- Blockers Section (static — update manually or extend to sheet) -->
   <div class="blocker-section">
     <div class="section-header">
       <div class="section-icon" style="background: linear-gradient(135deg,#F5A623,#FFD166);">
@@ -1142,13 +372,12 @@
       </div>
     </div>
 
-    <!-- Primary Blocker Banner -->
     <div class="blocker-banner">
       <div class="blocker-icon">
         <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="23" y1="11" x2="17" y2="11" stroke="white" stroke-width="2"/></svg>
       </div>
       <div class="blocker-content">
-        <div class="blocker-title">&#9888;&#65039; Build Capacity Constraint — Contracts Hub Workflow Development</div>
+        <div class="blocker-title">⚠️ Build Capacity Constraint — Contracts Hub Workflow Development</div>
         <div class="blocker-desc">
           The Contracts Hub has a dedicated TPM who carries significant <strong>platform-level responsibilities</strong> spanning the full Hub ecosystem. However, the volume and pace of individual workflow builds has grown to a point where <strong>build-level project management cannot be fully absorbed</strong> alongside those platform responsibilities. As a result, the workflow developer is currently carrying both <strong>hands-on development and build-level PM duties</strong> simultaneously across the majority of active builds — a structural capacity gap that compounds as the portfolio continues to grow.
         </div>
@@ -1162,7 +391,6 @@
       </div>
     </div>
 
-    <!-- Risk Cards -->
     <div class="risk-grid">
       <div class="risk-card">
         <div class="risk-card-title">
@@ -1191,18 +419,18 @@
     </div>
   </div>
 
-  <!-- ═══ SECOND BLOCKER: ENG TEAM TRANSITION ══════════════════ -->
+  <!-- Eng Team Transition Blocker -->
   <div style="margin-top: 20px;">
     <div class="blocker-banner" style="border-left-color: #C0392B; border-color: #E57373; background: linear-gradient(135deg, #FFF5F5, #FFF8F8);">
       <div class="blocker-icon" style="background: linear-gradient(135deg, #E53935, #EF9A9A);">
         <svg viewBox="0 0 24 24" fill="white"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
       </div>
       <div class="blocker-content">
-        <div class="blocker-title" style="color: #7B1A1A;">&#128680; Potential Engineering Team Transition — Contracts Hub Backend</div>
+        <div class="blocker-title" style="color: #7B1A1A;">🚨 Potential Engineering Team Transition — Contracts Hub Backend</div>
         <div class="blocker-desc" style="color: #5C1A1A;">
           The Engineering team currently supporting the Contracts Hub backend is <strong>potentially being switched</strong>. If this transition occurs, it will introduce a <strong>ramp-up period</strong> during which the incoming team must gain familiarity with the Hub's backend architecture, existing configurations, and active build dependencies. This creates a risk of <strong>build freezes, delayed support response, and regression risk</strong> across all workflows currently in development or nearing launch.
         </div>
-        <div class="blocker-tags" style="">
+        <div class="blocker-tags">
           <span class="blocker-tag" style="background:rgba(192,57,43,.1); border-color:rgba(192,57,43,.3); color:#7B1A1A;">Eng Team Change Pending</span>
           <span class="blocker-tag" style="background:rgba(192,57,43,.1); border-color:rgba(192,57,43,.3); color:#7B1A1A;">Backend Ramp-Up Required</span>
           <span class="blocker-tag" style="background:rgba(192,57,43,.1); border-color:rgba(192,57,43,.3); color:#7B1A1A;">All Active Builds at Risk</span>
@@ -1254,9 +482,7 @@
   Prepared by <strong>Legal Technology</strong> &nbsp;·&nbsp; Contract Intelligence &amp; Automation &nbsp;·&nbsp; April 2026
 </footer>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     MODALS
-════════════════════════════════════════════════════════════════ -->
+<!-- ═══ MODAL ══════════════════════════════════════════════════════ -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal" id="modalBox">
     <div class="modal-header">
@@ -1282,18 +508,18 @@
         </div>
         <div class="modal-meta-item">
           <div class="label">Owner</div>
-          <div class="value">Legal Technology</div>
+          <div class="value" id="mOwner">Legal Technology</div>
         </div>
         <div class="modal-meta-item">
           <div class="label">Last Updated</div>
-          <div class="value">April 2026</div>
+          <div class="value" id="mUpdated">April 2026</div>
         </div>
         <div class="modal-meta-item" id="mLinkItem" style="display:none">
           <div class="label">Project Link</div>
           <div class="value"><a id="mLink" href="#" target="_blank" style="color:var(--meta-blue);text-decoration:none;font-weight:600;">View in GSD ↗</a></div>
         </div>
       </div>
-      <div class="progress-section">
+      <div class="progress-section" style="margin-top:20px">
         <div class="progress-label"><span>Overall Completion</span><span id="mPct"></span></div>
         <div class="progress-track"><div class="progress-fill" id="mBar"></div></div>
       </div>
@@ -1301,216 +527,194 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     JAVASCRIPT
-════════════════════════════════════════════════════════════════ -->
+<!-- ═══ JAVASCRIPT ════════════════════════════════════════════════ -->
 <script>
-  /* ── Modal Data ─────────────────────────────────────────────── */
-  const modals = {
-    'modal-adobe': {
-      category: 'Infrastructure / Tooling',
-      title: 'Adobe Sign Migration',
-      status: '✅ Complete',
-      workstream: 'Infrastructure',
-      pct: '100%',
-      barClass: 'complete',
-      impact: 'The Adobe Sign Migration transitioned Meta\'s Adobe Sign environment from the Legacy platform to the Adobe Admin Console — Adobe\'s current standard environment for managing licenses across all Adobe products. This migration modernizes how access is provisioned and managed without changing the end-user experience or how Adobe Sign functions day-to-day. The move ensures alignment with Adobe\'s current product architecture, improves license visibility and control, and positions the organization for future Adobe product integrations managed through a single unified console.'
-    },
-    'modal-ssip': {
-      category: 'Contracts Hub',
-      title: 'SSIP Translations',
-      status: '🚀 Launching',
-      workstream: 'Contracts Hub',
-      pct: '90%',
-      barClass: 'launching',
-      impact: 'The SSIP Translations project delivers a fully automated Contracts Hub workflow covering 16 distinct IP Agreement types, each translated and localized across 10 languages. The end-to-end automation handles agreement drafting, routing, and completion without manual intervention — eliminating translation bottlenecks, reducing turnaround time for international IP agreements, and ensuring consistent, compliant execution across all supported jurisdictions. This positions Legal Technology to support global IP operations at scale.'
-    },
-    'modal-music': {
-      category: 'Contracts Hub',
-      title: 'Music Licensing',
-      status: '🚀 Launching',
-      workstream: 'Contracts Hub',
-      pct: '88%',
-      barClass: 'launching',
-      impact: 'The Music Licensing project streamlines the intake, negotiation, and lifecycle management of music licensing agreements within Contracts Hub. This removes bottlenecks in content clearance workflows, accelerates time-to-market for creative and marketing projects, and provides a centralized repository for all music rights obligations — reducing risk of unlicensed usage and simplifying renewals.'
-    },
-    'modal-pate': {
-      category: 'Contracts Hub',
-      title: 'PATE Integration',
-      status: '🔧 Build in Progress',
-      workstream: 'Contracts Hub',
-      pct: '55%',
-      barClass: 'progress',
-      impact: 'PATE is an AI generative tool used by the IP Team to automatically produce IP Licensing agreements from intake to completion — with the full agreement generated by AI without manual drafting. The PATE Integration connects this AI output directly to Contracts Hub, where the generated agreements are received for compliance review, routing, and final execution and storage. This creates a seamless, end-to-end AI-powered IP licensing pipeline that dramatically reduces cycle time and manual touchpoints across the IP agreement lifecycle.'
-    },
-    'modal-ivo': {
-      category: 'Systems Integration',
-      title: 'IVO Integration with Contracts Hub',
-      status: '🔧 In Progress',
-      workstream: 'Systems Integration',
-      pct: '45%',
-      barClass: 'progress',
-      impact: 'IVO is an AI-powered contract drafting tool that provides clause libraries, real-time risk scoring, and intelligent contract comparison — enabling Legal teams to assess whether new agreements carry more or less risk than prior contracts, identify verbatim and structural differences, and leverage institutional knowledge from pre-existing agreements. The IVO Integration embeds this intelligence directly into Contracts Hub, allowing users to perform custom agreement drafting and redlining within the platform before routing for review and execution. This brings AI-assisted risk intelligence into the core contract workflow.'
-    },
-    'modal-idc': {
-      category: 'Contracts Hub',
-      title: 'IDC / Leasing Agreements — Data Centers',
-      status: '📋 Requirements Gathering',
-      workstream: 'Contracts Hub',
-      pct: '20%',
-      barClass: 'reqs',
-      impact: 'This project will centralize the management of data center leasing and infrastructure contracts within Contracts Hub, providing Legal and Finance with a unified view of obligations, renewal timelines, and cost exposure across the global data center portfolio. Improved visibility into these high-value agreements will support better negotiation outcomes and reduce the risk of missed renewals or unplanned cost escalations.'
-    },
-    'modal-mrs': {
-      category: 'Contracts Hub',
-      title: 'MRS Agreements — Hardware Dev & Supply',
-      status: '📋 Requirements Gathering',
-      workstream: 'Contracts Hub',
-      pct: '20%',
-      barClass: 'reqs',
-      impact: 'The MRS Agreements project will bring hardware development and supply agreements into the Contracts Hub framework, enabling proactive risk management and supplier compliance tracking at scale. Centralizing these agreements provides Legal and Procurement with consistent contract templates, obligation tracking, and milestone visibility across a complex and high-volume hardware supply chain.'
-    },
-    'modal-pipeline': {
-      category: 'Contracts Hub',
-      title: 'Additional Pipeline Builds, Maintenance & Fixes',
-      status: '🔧 Active Builds',
-      workstream: 'Contracts Hub',
-      pct: '35%',
-      barClass: 'progress',
-      impact: 'In addition to the primary projects in this overview, the Contracts Hub team is actively building and maintaining several parallel workstreams. These represent real capacity demand running concurrently with all other listed initiatives.',
-      isPipeline: true,
-      pipelineItems: [
-        { title: 'MRA & SOW Amendments', desc: 'Enhancements to existing Master Retention Agreement and Statement of Work workflows for Outside Counsel at Meta — adding amendment support so changes to executed agreements can be made without requiring full re-execution.' },
-        { title: 'Bill of Sale Workflow', desc: 'New end-to-end Contracts Hub workflow for bill of sale transactions, covering intake, drafting, approval routing, and execution.' },
-        { title: 'CWX Migration from Buy@', desc: 'Migration of the CWX workflow — which manages a high volume of contingent worker agreements — out of Buy@ and into Contracts Hub. This workflow spans Legal, Sourcing, and the People Team and represents significant cross-functional coordination.' },
-        { title: 'AI Data Acquisitions Workflow', desc: 'New workflow purpose-built for AI data acquisition agreements, supporting the growing volume of data licensing and acquisition activity tied to AI development initiatives.' }
-      ]
-    },
-    'modal-mra': {
-      category: 'Contracts Hub',
-      title: 'MRA & SOW Amendments',
-      status: '🔧 In Progress',
-      workstream: 'Contracts Hub',
-      pct: '40%',
-      barClass: 'progress',
-      impact: 'This project enhances the existing Master Retention Agreement (MRA) and Statement of Work (SOW) workflows within Contracts Hub that govern Outside Counsel engagements at Meta. Currently, changes to executed agreements require full re-execution. The amendment capability will allow parties to modify specific terms — such as scope, fees, or timelines — without restarting the entire agreement lifecycle, reducing cycle time and administrative overhead for Outside Counsel engagements that frequently require mid-engagement adjustments.'
-    },
-    'modal-bos': {
-      category: 'Contracts Hub',
-      title: 'Bill of Sale Workflow',
-      status: '🔧 In Progress',
-      workstream: 'Contracts Hub',
-      pct: '35%',
-      barClass: 'progress',
-      impact: 'A new end-to-end Contracts Hub workflow purpose-built for bill of sale transactions. This covers the full agreement lifecycle from intake and drafting through approval routing and final execution, standardizing how asset transfer agreements are processed and stored across the organization.'
-    },
-    'modal-cwx': {
-      category: 'Contracts Hub',
-      title: 'CWX Migration (Buy@)',
-      status: '🔧 In Progress',
-      workstream: 'Contracts Hub',
-      pct: '30%',
-      barClass: 'progress',
-      impact: 'The CWX workflow manages a high volume of contingent worker agreements across Legal, Sourcing, and the People Team. This project migrates that workflow out of Buy@ and into Contracts Hub, consolidating contract management into a single platform and improving visibility, compliance tracking, and cross-functional coordination for contingent workforce agreements.'
-    },
-    'modal-ai-data': {
-      category: 'Contracts Hub',
-      title: 'AI Data Acquisitions Workflow',
-      status: '📋 Requirements Gathering',
-      workstream: 'Contracts Hub · AI Projects',
-      pct: '15%',
-      barClass: 'reqs',
-      impact: 'A purpose-built Contracts Hub workflow designed to handle the growing volume of AI data acquisition agreements tied to Meta\'s AI development initiatives. This workflow will standardize intake, negotiation, compliance review, and execution for data licensing and acquisition contracts, ensuring Legal has a scalable, auditable process as AI data needs continue to expand.'
-    },
-    'modal-adobe-ownership': {
-      category: 'Adobe Sign',
-      title: 'Adobe Sign Ownership Migration',
-      status: '🔧 In Progress',
-      workstream: 'Adobe Sign',
-      pct: '25%',
-      barClass: 'progress',
-      impact: 'Legal Technology currently owns and manages Adobe Sign company-wide — including provisioning, the Exemption process for Legal Compliance-approved access, all support requests (bugs, integrations, troubleshooting, permission management, agreement lookups), and engineering policy obligations such as required on-call coverage and semi-annual data privacy surveys. This project transitions that ownership to EP/EE, allowing Legal Technology to refocus exclusively on Legal-specific Adobe Sign needs and reduce the operational burden of supporting all departments across the company.'
-    },
-    'modal-adobe-support': {
-      category: 'Adobe Sign',
-      title: 'Ongoing Adobe Sign Support',
-      status: '🔧 Ongoing',
-      workstream: 'Adobe Sign',
-      pct: '100%',
-      barClass: 'complete',
-      impact: 'Legal Technology is the current company-wide owner and support team for Adobe Sign. Ongoing responsibilities include user provisioning, managing the Exemption process that grants access via Legal Compliance approval, resolving bugs and integration issues, troubleshooting user problems, managing permissions, handling agreement lookups, and fulfilling engineering policy requirements — including maintaining required on-call coverage and completing semi-annual data privacy surveys. This workstream represents significant ongoing operational capacity that runs concurrently with all active build projects.'
-    },
-    'modal-cases-1': {
-      category: 'Cases',
-      title: 'Legal Payments & Settlements',
-      status: '🔧 In Progress',
-      workstream: 'Cases',
-      owner: 'Legal Technology',
-      pct: '50%',
-      barClass: 'progress',
-      link: 'https://www.internalfb.com/gsd/426274309964518/1473688467022031/list',
-      impact: 'The Legal Payments and Settlements Cases program is designed to ensure compliance in processing various settlements directed towards Meta and its affiliates. This program centralizes, standardizes, and automates the management of legal payments and settlements, supporting Meta\'s commitment to regulatory compliance, financial integrity, and operational efficiency.'
-    },
-    'modal-cases-2': {
-      category: 'Cases',
-      title: 'CAIA Feedback — Compliance Hub',
-      status: '🔧 In Progress',
-      workstream: 'Cases · AI Projects',
-      owner: 'Legal Technology',
-      pct: '50%',
-      barClass: 'progress',
-      link: 'https://www.internalfb.com/gsd/426274309964518/497246233275937',
-      impact: 'The integration of the CAIA AI chatbot with Cases introduces a powerful capability: extracting compliance feedback from Compliance Hub and transforming it into actionable items within the Cases & GSD platforms. This enhancement streamlines compliance workflows, improves traceability, and accelerates the resolution of compliance-related issues.'
-    },
-    'modal-cases-3': {
-      category: 'Cases',
-      title: 'Lien & Levy — RFI',
-      status: '✅ Complete',
-      workstream: 'Cases',
-      owner: 'Legal Technology',
-      pct: '100%',
-      barClass: 'complete',
-      link: 'https://www.internalfb.com/gsd/426274309964518/759814053064005/list',
-      impact: 'The integration of the Liens & Levies Cases program with the Legal Workflow Management (LWM) system enables the standardized creation of Requests for Information (RFIs) directly from within Cases. This enhancement streamlines the process of gathering information, ensures consistency, and improves the overall efficiency and compliance of the Liens & Levies workflow.'
-    },
-    'modal-terms-hub': {
-      category: 'Contracts Hub',
-      title: 'Terms Hub',
-      status: '📋 Requirements Gathering',
-      workstream: 'Contracts Hub',
-      pct: '10%',
-      barClass: 'reqs',
-      impact: 'Terms Hub is a new addition to the Contracts Hub platform designed to centralize the management of all public-facing Meta terms and policies. The project will automate the full lifecycle of terms management — including structured approval workflows for any changes, a versioned term library for historical reference, and direct CMS integration that automatically pushes approved term updates or new term additions to live Meta web pages. This eliminates manual publishing steps, ensures legal accuracy of all public-facing terms, and creates a single source of truth for Meta’s global policy and terms obligations.'
-    },
-    'modal-ai': {
-      category: 'AI & Innovation',
-      title: 'AI-Generated Hub Workflow Building',
-      status: '🤖 Requirements / Mock-Ups',
-      workstream: 'AI & Innovation',
-      pct: '15%',
-      barClass: 'reqs',
-      impact: 'This initiative leverages AI to auto-generate contract workflow templates and intelligent routing logic within Contracts Hub, dramatically reducing the time required to stand up new contract processes. By automating workflow design, Legal Technology can respond faster to new business needs, reduce dependency on manual configuration, and position the team as a strategic leader in AI-driven legal operations innovation.'
-    }
+  // ─────────────────────────────────────────────────────────────────
+  // CONFIGURATION
+  // Replace SHEET_CSV_URL with your published Google Sheet CSV URL.
+  // To get it: File → Share → Publish to web → CSV → Copy link
+  // ─────────────────────────────────────────────────────────────────
+  const SHEET_CSV_URL = 'REPLACE_WITH_GOOGLE_SHEET_CSV_URL';
+
+  // ─────────────────────────────────────────────────────────────────
+  // FALLBACK DATA (used when no sheet URL is configured)
+  // This is the full current dataset — edit here until you connect a sheet
+  // ─────────────────────────────────────────────────────────────────
+  const FALLBACK_PROJECTS = [
+    { name: 'Adobe Sign Migration', category: 'Infrastructure / Tooling', workstream: 'adobe-sign', workstreamLabel: 'Adobe Sign', status: 'complete', statusLabel: 'Complete', progress: 100, tags: '', owner: 'Legal Technology', link: '', impact: 'The Adobe Sign Migration transitioned Meta\'s Adobe Sign environment from the Legacy platform to the Adobe Admin Console — Adobe\'s current standard environment for managing licenses across all Adobe products. This migration modernizes how access is provisioned and managed without changing the end-user experience or how Adobe Sign functions day-to-day. The move ensures alignment with Adobe\'s current product architecture, improves license visibility and control, and positions the organization for future Adobe product integrations managed through a single unified console.' },
+    { name: 'Adobe Sign Ownership Migration', category: 'Adobe Sign', workstream: 'adobe-sign', workstreamLabel: 'Adobe Sign', status: 'progress', statusLabel: 'In Progress', progress: 25, tags: '', owner: 'Legal Technology', link: '', impact: 'Legal Technology currently owns and manages Adobe Sign company-wide — including provisioning, the Exemption process for Legal Compliance-approved access, all support requests (bugs, integrations, troubleshooting, permission management, agreement lookups), and engineering policy obligations such as required on-call coverage and semi-annual data privacy surveys. This project transitions that ownership to EP/EE, allowing Legal Technology to refocus exclusively on Legal-specific Adobe Sign needs and reduce the operational burden of supporting all departments across the company.' },
+    { name: 'Ongoing Adobe Sign Support', category: 'Adobe Sign', workstream: 'adobe-sign', workstreamLabel: 'Adobe Sign', status: 'progress', statusLabel: 'Ongoing', progress: 100, tags: '', owner: 'Legal Technology', link: '', impact: 'Legal Technology is the current company-wide owner and support team for Adobe Sign. Ongoing responsibilities include user provisioning, managing the Exemption process that grants access via Legal Compliance approval, resolving bugs and integration issues, troubleshooting user problems, managing permissions, handling agreement lookups, and fulfilling engineering policy requirements — including maintaining required on-call coverage and completing semi-annual data privacy surveys. This workstream represents significant ongoing operational capacity that runs concurrently with all active build projects.' },
+    { name: 'SSIP Translations', category: 'Contracts Hub', workstream: 'contracts-hub', workstreamLabel: 'Contracts Hub', status: 'launching', statusLabel: 'Launching', progress: 90, tags: '', owner: 'Legal Technology', link: '', impact: 'The SSIP Translations project delivers a fully automated Contracts Hub workflow covering 16 distinct IP Agreement types, each translated and localized across 10 languages. The end-to-end automation handles agreement drafting, routing, and completion without manual intervention — eliminating translation bottlenecks, reducing turnaround time for international IP agreements, and ensuring consistent, compliant execution across all supported jurisdictions. This positions Legal Technology to support global IP operations at scale.' },
+    { name: 'Music Licensing', category: 'Contracts Hub', workstream: 'contracts-hub', workstreamLabel: 'Contracts Hub', status: 'launching', statusLabel: 'Launching', progress: 88, tags: '', owner: 'Legal Technology', link: '', impact: 'The Music Licensing project streamlines the intake, negotiation, and lifecycle management of music licensing agreements within Contracts Hub. This removes bottlenecks in content clearance workflows, accelerates time-to-market for creative and marketing projects, and provides a centralized repository for all music rights obligations — reducing risk of unlicensed usage and simplifying renewals.' },
+    { name: 'PATE Integration', category: 'Contracts Hub', workstream: 'contracts-hub ai-projects', workstreamLabel: 'Contracts Hub · AI Projects', status: 'progress', statusLabel: 'Build in Progress', progress: 55, tags: 'AI', owner: 'Legal Technology', link: '', impact: 'PATE is an AI generative tool used by the IP Team to automatically produce IP Licensing agreements from intake to completion — with the full agreement generated by AI without manual drafting. The PATE Integration connects this AI output directly to Contracts Hub, where the generated agreements are received for compliance review, routing, and final execution and storage. This creates a seamless, end-to-end AI-powered IP licensing pipeline that dramatically reduces cycle time and manual touchpoints across the IP agreement lifecycle.' },
+    { name: 'IVO Integration with Contracts Hub', category: 'Systems Integration', workstream: 'contracts-hub ai-projects', workstreamLabel: 'Systems Integration · AI Projects', status: 'progress', statusLabel: 'In Progress', progress: 45, tags: 'AI', owner: 'Legal Technology', link: '', impact: 'IVO is an AI-powered contract drafting tool that provides clause libraries, real-time risk scoring, and intelligent contract comparison — enabling Legal teams to assess whether new agreements carry more or less risk than prior contracts, identify verbatim and structural differences, and leverage institutional knowledge from pre-existing agreements. The IVO Integration embeds this intelligence directly into Contracts Hub, allowing users to perform custom agreement drafting and redlining within the platform before routing for review and execution. This brings AI-assisted risk intelligence into the core contract workflow.' },
+    { name: 'IDC / Leasing Agreements — Data Centers', category: 'Contracts Hub', workstream: 'contracts-hub', workstreamLabel: 'Contracts Hub', status: 'reqs', statusLabel: 'Requirements', progress: 20, tags: '', owner: 'Legal Technology', link: '', impact: 'This project will centralize the management of data center leasing and infrastructure contracts within Contracts Hub, providing Legal and Finance with a unified view of obligations, renewal timelines, and cost exposure across the global data center portfolio. Improved visibility into these high-value agreements will support better negotiation outcomes and reduce the risk of missed renewals or unplanned cost escalations.' },
+    { name: 'MRS Agreements — Hardware Dev & Supply', category: 'Contracts Hub', workstream: 'contracts-hub', workstreamLabel: 'Contracts Hub', status: 'reqs', statusLabel: 'Requirements', progress: 20, tags: '', owner: 'Legal Technology', link: '', impact: 'The MRS Agreements project will bring hardware development and supply agreements into the Contracts Hub framework, enabling proactive risk management and supplier compliance tracking at scale. Centralizing these agreements provides Legal and Procurement with consistent contract templates, obligation tracking, and milestone visibility across a complex and high-volume hardware supply chain.' },
+    { name: 'MRA & SOW Amendments', category: 'Contracts Hub', workstream: 'contracts-hub', workstreamLabel: 'Contracts Hub', status: 'progress', statusLabel: 'In Progress', progress: 40, tags: '', owner: 'Legal Technology', link: '', impact: 'This project enhances the existing Master Retention Agreement (MRA) and Statement of Work (SOW) workflows within Contracts Hub that govern Outside Counsel engagements at Meta. Currently, changes to executed agreements require full re-execution. The amendment capability will allow parties to modify specific terms — such as scope, fees, or timelines — without restarting the entire agreement lifecycle, reducing cycle time and administrative overhead for Outside Counsel engagements that frequently require mid-engagement adjustments.' },
+    { name: 'Bill of Sale Workflow', category: 'Contracts Hub', workstream: 'contracts-hub', workstreamLabel: 'Contracts Hub', status: 'progress', statusLabel: 'In Progress', progress: 35, tags: '', owner: 'Legal Technology', link: '', impact: 'A new end-to-end Contracts Hub workflow purpose-built for bill of sale transactions. This covers the full agreement lifecycle from intake and drafting through approval routing and final execution, standardizing how asset transfer agreements are processed and stored across the organization.' },
+    { name: 'CWX Migration (Buy@)', category: 'Contracts Hub', workstream: 'contracts-hub', workstreamLabel: 'Contracts Hub', status: 'progress', statusLabel: 'In Progress', progress: 30, tags: '', owner: 'Legal Technology', link: '', impact: 'The CWX workflow manages a high volume of contingent worker agreements across Legal, Sourcing, and the People Team. This project migrates that workflow out of Buy@ and into Contracts Hub, consolidating contract management into a single platform and improving visibility, compliance tracking, and cross-functional coordination for contingent workforce agreements.' },
+    { name: 'AI Data Acquisitions Workflow', category: 'Contracts Hub', workstream: 'contracts-hub ai-projects', workstreamLabel: 'Contracts Hub · AI Projects', status: 'reqs', statusLabel: 'Requirements', progress: 15, tags: 'AI', owner: 'Legal Technology', link: '', impact: 'A purpose-built Contracts Hub workflow designed to handle the growing volume of AI data acquisition agreements tied to Meta\'s AI development initiatives. This workflow will standardize intake, negotiation, compliance review, and execution for data licensing and acquisition contracts, ensuring Legal has a scalable, auditable process as AI data needs continue to expand.' },
+    { name: 'Terms Hub', category: 'Contracts Hub', workstream: 'contracts-hub', workstreamLabel: 'Contracts Hub', status: 'reqs', statusLabel: 'Requirements', progress: 10, tags: '', owner: 'Legal Technology', link: '', impact: 'Terms Hub is a new addition to the Contracts Hub platform designed to centralize the management of all public-facing Meta terms and policies. The project will automate the full lifecycle of terms management — including structured approval workflows for any changes, a versioned term library for historical reference, and direct CMS integration that automatically pushes approved term updates or new term additions to live Meta web pages. This eliminates manual publishing steps, ensures legal accuracy of all public-facing terms, and creates a single source of truth for Meta\'s global policy and terms obligations.' },
+    { name: 'AI-Generated Hub Workflow Building', category: 'Contracts Hub', workstream: 'contracts-hub ai-projects', workstreamLabel: 'Contracts Hub · AI Projects', status: 'reqs', statusLabel: 'Requirements / Mock-Ups', progress: 15, tags: 'AI', owner: 'Legal Technology', link: '', impact: 'This initiative leverages AI to auto-generate contract workflow templates and intelligent routing logic within Contracts Hub, dramatically reducing the time required to stand up new contract processes. By automating workflow design, Legal Technology can respond faster to new business needs, reduce dependency on manual configuration, and position the team as a strategic leader in AI-driven legal operations innovation.' },
+    { name: 'Legal Payments & Settlements', category: 'Cases', workstream: 'cases', workstreamLabel: 'Cases', status: 'progress', statusLabel: 'In Progress', progress: 50, tags: '', owner: 'Legal Technology', link: 'https://www.internalfb.com/gsd/426274309964518/1473688467022031/list', impact: 'The Legal Payments and Settlements Cases program is designed to ensure compliance in processing various settlements directed towards Meta and its affiliates. This program centralizes, standardizes, and automates the management of legal payments and settlements, supporting Meta\'s commitment to regulatory compliance, financial integrity, and operational efficiency.' },
+    { name: 'CAIA Feedback — Compliance Hub', category: 'Cases', workstream: 'cases ai-projects', workstreamLabel: 'Cases · AI Projects', status: 'progress', statusLabel: 'In Progress', progress: 50, tags: 'AI', owner: 'Legal Technology', link: 'https://www.internalfb.com/gsd/426274309964518/497246233275937', impact: 'The integration of the CAIA AI chatbot with Cases introduces a powerful capability: extracting compliance feedback from Compliance Hub and transforming it into actionable items within the Cases & GSD platforms. This enhancement streamlines compliance workflows, improves traceability, and accelerates the resolution of compliance-related issues.' },
+    { name: 'Lien & Levy — RFI', category: 'Cases', workstream: 'cases', workstreamLabel: 'Cases', status: 'complete', statusLabel: 'Complete', progress: 100, tags: '', owner: 'Legal Technology', link: 'https://www.internalfb.com/gsd/426274309964518/759814053064005/list', impact: 'The integration of the Liens & Levies Cases program with the Legal Workflow Management (LWM) system enables the standardized creation of Requests for Information (RFIs) directly from within Cases. This enhancement streamlines the process of gathering information, ensures consistency, and improves the overall efficiency and compliance of the Liens & Levies workflow.' }
+  ];
+
+  // ─────────────────────────────────────────────────────────────────
+  // CSV PARSER
+  // ─────────────────────────────────────────────────────────────────
+  function parseCSV(text) {
+    const lines = text.trim().split('\n');
+    if (lines.length < 2) return [];
+    const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, '').toLowerCase().replace(/\s+/g, '_'));
+    return lines.slice(1).map(line => {
+      // Handle quoted fields with commas
+      const fields = [];
+      let current = '';
+      let inQuotes = false;
+      for (let i = 0; i < line.length; i++) {
+        if (line[i] === '"') { inQuotes = !inQuotes; }
+        else if (line[i] === ',' && !inQuotes) { fields.push(current.trim()); current = ''; }
+        else { current += line[i]; }
+      }
+      fields.push(current.trim());
+      const obj = {};
+      headers.forEach((h, i) => { obj[h] = (fields[i] || '').replace(/^"|"$/g, ''); });
+      return obj;
+    }).filter(row => row.name && row.name.trim() !== '');
+  }
+
+  // Map sheet row to project object
+  function mapRow(row) {
+    const statusMap = {
+      'complete': 'complete', 'completed': 'complete',
+      'launching': 'launching', 'launch': 'launching',
+      'in progress': 'progress', 'progress': 'progress', 'build in progress': 'progress', 'ongoing': 'progress',
+      'requirements': 'reqs', 'requirements gathering': 'reqs', 'requirements / mock-ups': 'reqs', 'planning': 'reqs'
+    };
+    const rawStatus = (row.status || '').toLowerCase().trim();
+    const status = statusMap[rawStatus] || 'reqs';
+    const wsRaw = (row.workstream_filter || row.workstream || '').toLowerCase();
+    const wsLabel = row.workstream_label || row.workstream || '';
+    return {
+      name: row.name || row.project_name || '',
+      category: row.category || row.workstream_label || '',
+      workstream: wsRaw.replace(/[^a-z0-9\s-]/g, '').trim(),
+      workstreamLabel: wsLabel,
+      status: status,
+      statusLabel: row.status || '',
+      progress: parseInt(row.progress || row.progress_pct || '0', 10),
+      tags: row.tags || '',
+      owner: row.owner || 'Legal Technology',
+      link: row.project_link || row.link || '',
+      impact: row.business_impact || row.impact || ''
+    };
+  }
+
+  // ─────────────────────────────────────────────────────────────────
+  // RENDER ENGINE
+  // ─────────────────────────────────────────────────────────────────
+  const statusBadgeMap = {
+    complete:  { cls: 'badge-complete',  label: 'Complete' },
+    launching: { cls: 'badge-launching', label: 'Launching' },
+    progress:  { cls: 'badge-progress',  label: 'In Progress' },
+    reqs:      { cls: 'badge-reqs',      label: 'Requirements' }
   };
 
-  /* ── Filter Logic ─────────────────────────────────────────── */
-  const cards = document.querySelectorAll('.project-card');
+  const kpiGradients = {
+    complete:  'background: linear-gradient(135deg,#23C552,#4ADE80); -webkit-background-clip:text; background-clip:text;',
+    launching: 'background: linear-gradient(135deg,#0082FB,#00C6FF); -webkit-background-clip:text; background-clip:text;',
+    progress:  'background: linear-gradient(135deg,#F5A623,#FFD166); -webkit-background-clip:text; background-clip:text;',
+    reqs:      'background: linear-gradient(135deg,#9E9E9E,#BDBDBD); -webkit-background-clip:text; background-clip:text;'
+  };
+
+  let allProjects = [];
   let activeStatus = 'all';
   let activeWorkstream = 'all';
 
+  function renderKPIs(projects) {
+    const counts = { complete: 0, launching: 0, progress: 0, reqs: 0 };
+    const names  = { complete: [], launching: [], progress: [], reqs: [] };
+    projects.forEach(p => { counts[p.status]++; names[p.status].push(p.name.split(' ').slice(0,2).join(' ')); });
+
+    const kpiLabels = { complete: 'Complete', launching: 'Launching', progress: 'In Progress', reqs: 'Requirements' };
+    const dotColors = { complete: 'var(--status-complete)', launching: 'var(--meta-blue)', progress: 'var(--status-progress)', reqs: 'var(--status-reqs)' };
+
+    let html = `<div class="kpi-card">
+      <div class="kpi-label">Total Projects</div>
+      <div class="kpi-value">${projects.length}</div>
+      <div class="kpi-sub">Across all workstreams</div>
+    </div>`;
+
+    ['complete','launching','progress','reqs'].forEach(s => {
+      const nameList = names[s].slice(0,4).join(', ') + (names[s].length > 4 ? ' +' + (names[s].length - 4) + ' more' : '');
+      html += `<div class="kpi-card">
+        <div class="kpi-label">${kpiLabels[s]}</div>
+        <div class="kpi-value" style="${kpiGradients[s]}">${counts[s]}</div>
+        <div class="kpi-sub"><span class="kpi-dot" style="background:${dotColors[s]}"></span>${nameList || 'None'}</div>
+      </div>`;
+    });
+
+    document.getElementById('kpiGrid').innerHTML = html;
+    document.getElementById('heroCount').textContent = projects.length + ' Projects Tracked';
+  }
+
+  function renderCards(projects) {
+    if (projects.length === 0) {
+      document.getElementById('projectsGrid').innerHTML = '<div class="loading-state" style="grid-column:1/-1"><div class="loading-text">No projects found in data source.</div></div>';
+      return;
+    }
+
+    const html = projects.map((p, idx) => {
+      const badge = statusBadgeMap[p.status] || statusBadgeMap.reqs;
+      const badgeLabel = p.statusLabel || badge.label;
+      return `<div class="project-card" data-status="${p.status}" data-workstream="${p.workstream}" data-idx="${idx}" onclick="openModal(${idx})">
+        <div class="card-accent ${p.status}"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div>
+              <div class="card-category">${p.category}</div>
+              <div class="card-title">${p.name}</div>
+            </div>
+            <span class="status-badge ${badge.cls}"><span class="dot"></span>${badgeLabel}</span>
+          </div>
+          <div class="card-impact-label">Business Impact</div>
+          <div class="card-impact">${p.impact.substring(0, 160)}${p.impact.length > 160 ? '…' : ''}</div>
+          <div class="progress-section">
+            <div class="progress-label"><span>Progress</span><span>${p.progress}%</span></div>
+            <div class="progress-track"><div class="progress-fill ${p.status}" style="width:0%" data-target="${p.progress}%"></div></div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-tag">${p.workstreamLabel}</span>
+          <button class="card-expand-btn" onclick="event.stopPropagation();openModal(${idx})">Details ›</button>
+        </div>
+      </div>`;
+    }).join('');
+
+    document.getElementById('projectsGrid').innerHTML = html;
+
+    // Animate progress bars
+    setTimeout(() => {
+      document.querySelectorAll('.progress-fill[data-target]').forEach(bar => {
+        bar.style.width = bar.dataset.target;
+      });
+    }, 200);
+
+    applyFilters();
+  }
+
   function applyFilters() {
-    cards.forEach(card => {
+    document.querySelectorAll('.project-card').forEach(card => {
       const statusMatch = activeStatus === 'all' || card.dataset.status === activeStatus;
       const wsData = card.dataset.workstream || '';
       const workstreamMatch = activeWorkstream === 'all' || wsData.split(' ').includes(activeWorkstream);
-      if (statusMatch && workstreamMatch) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
+      card.classList.toggle('hidden', !(statusMatch && workstreamMatch));
     });
   }
 
+  // Filter buttons
   document.querySelectorAll('.filter-btn[data-filter-type="status"]').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.filter-btn[data-filter-type="status"]').forEach(b => b.classList.remove('active'));
@@ -1519,7 +723,6 @@
       applyFilters();
     });
   });
-
   document.querySelectorAll('.filter-btn[data-filter-type="workstream"]').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.filter-btn[data-filter-type="workstream"]').forEach(b => b.classList.remove('active'));
@@ -1529,60 +732,70 @@
     });
   });
 
-  /* ── Modal Logic ─────────────────────────────────────────── */
+  // ─────────────────────────────────────────────────────────────────
+  // MODAL
+  // ─────────────────────────────────────────────────────────────────
   const overlay = document.getElementById('modalOverlay');
-  const modalClose = document.getElementById('modalClose');
 
-  function openModal(id) {
-    const d = modals[id];
-    if (!d) return;
-    document.getElementById('mCategory').textContent = d.category;
-    document.getElementById('mTitle').textContent = d.title;
-    document.getElementById('mStatus').textContent = d.status;
-    document.getElementById('mWorkstream').textContent = d.workstream;
-    document.getElementById('mPct').textContent = d.pct;
+  function openModal(idx) {
+    const p = allProjects[idx];
+    if (!p) return;
+    document.getElementById('mCategory').textContent = p.category;
+    document.getElementById('mTitle').textContent = p.name;
+    document.getElementById('mStatus').textContent = p.statusLabel || p.status;
+    document.getElementById('mWorkstream').textContent = p.workstreamLabel;
+    document.getElementById('mOwner').textContent = p.owner || 'Legal Technology';
+    document.getElementById('mPct').textContent = p.progress + '%';
+    document.getElementById('mImpact').textContent = p.impact;
     const bar = document.getElementById('mBar');
-    bar.className = 'progress-fill ' + d.barClass;
+    bar.className = 'progress-fill ' + p.status;
     bar.style.width = '0%';
     const linkItem = document.getElementById('mLinkItem');
-    const linkEl = document.getElementById('mLink');
-    if (d.link) {
-      linkEl.href = d.link;
+    if (p.link) {
+      document.getElementById('mLink').href = p.link;
       linkItem.style.display = 'block';
     } else {
       linkItem.style.display = 'none';
     }
-    const impactEl = document.getElementById('mImpact');
-    if (d.isPipeline && d.pipelineItems) {
-      impactEl.innerHTML = d.impact + '<ul class="modal-pipeline-list" style="margin-top:14px">' +
-        d.pipelineItems.map(item =>
-          `<li><strong>${item.title}</strong>${item.desc}</li>`
-        ).join('') +
-        '</ul>';
-    } else {
-      impactEl.textContent = d.impact;
-    }
     overlay.classList.add('open');
-    setTimeout(() => { bar.style.width = d.pct; }, 80);
+    setTimeout(() => { bar.style.width = p.progress + '%'; }, 80);
   }
 
   function closeModal() { overlay.classList.remove('open'); }
-
-  cards.forEach(card => {
-    card.addEventListener('click', () => openModal(card.dataset.modal));
-  });
-  modalClose.addEventListener('click', closeModal);
+  document.getElementById('modalClose').addEventListener('click', closeModal);
   overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-  /* ── Animate progress bars on load ─────────────────────────── */
-  window.addEventListener('load', () => {
-    document.querySelectorAll('.progress-fill').forEach(bar => {
-      const target = bar.style.width;
-      bar.style.width = '0%';
-      setTimeout(() => { bar.style.width = target; }, 300);
-    });
-  });
+  // ─────────────────────────────────────────────────────────────────
+  // DATA LOADER
+  // ─────────────────────────────────────────────────────────────────
+  async function loadData() {
+    if (SHEET_CSV_URL && SHEET_CSV_URL !== 'REPLACE_WITH_GOOGLE_SHEET_CSV_URL') {
+      try {
+        const res = await fetch(SHEET_CSV_URL);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const text = await res.text();
+        const rows = parseCSV(text);
+        if (rows.length > 0) {
+          allProjects = rows.map(mapRow);
+          // Show sheet banner
+          document.getElementById('sheetBanner').style.display = 'flex';
+          document.getElementById('sheetLink').href = SHEET_CSV_URL.replace('/pub?', '/edit?').replace('output=csv', '');
+          renderKPIs(allProjects);
+          renderCards(allProjects);
+          return;
+        }
+      } catch(e) {
+        console.warn('Could not load Google Sheet, falling back to built-in data:', e);
+      }
+    }
+    // Use fallback data
+    allProjects = FALLBACK_PROJECTS;
+    renderKPIs(allProjects);
+    renderCards(allProjects);
+  }
+
+  loadData();
 </script>
 </body>
 </html>
