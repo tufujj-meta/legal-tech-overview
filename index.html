@@ -772,9 +772,23 @@
   async function loadData() {
     if (SHEET_CSV_URL && SHEET_CSV_URL !== 'REPLACE_WITH_GOOGLE_SHEET_CSV_URL') {
       try {
-        const res = await fetch(SHEET_CSV_URL);
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        const text = await res.text();
+        // Try direct fetch first, then fall back to CORS proxy
+        let text = null;
+        const CORS_PROXY = 'https://corsproxy.io/?' + encodeURIComponent(SHEET_CSV_URL);
+        try {
+          const controller = new AbortController();
+          const timeout = setTimeout(() => controller.abort(), 5000);
+          const res = await fetch(SHEET_CSV_URL, { signal: controller.signal });
+          clearTimeout(timeout);
+          if (res.ok) text = await res.text();
+        } catch(e) {
+          // Direct fetch failed or timed out, try proxy
+        }
+        if (!text) {
+          const res2 = await fetch(CORS_PROXY);
+          if (!res2.ok) throw new Error('Proxy HTTP ' + res2.status);
+          text = await res2.text();
+        }
         const rows = parseCSV(text);
         if (rows.length > 0) {
           allProjects = rows.map(mapRow);
