@@ -243,6 +243,52 @@
     .legend-item { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: var(--meta-mid); }
     .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
 
+    /* ─── View Toggle ─────────────────────────────────────────── */
+    .view-toggle { display: flex; background: var(--meta-bg); border-radius: 10px; padding: 3px; gap: 2px; }
+    .view-btn { background: transparent; border: none; padding: 6px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; color: var(--meta-muted); cursor: pointer; transition: var(--transition); white-space: nowrap; }
+    .view-btn.active { background: var(--white); color: var(--meta-blue); box-shadow: var(--shadow-sm); }
+    .view-btn:hover:not(.active) { color: var(--meta-dark); }
+
+    /* ─── Handoff View ──────────────────────────────────────────── */
+    #handoffView { display: none; }
+    .handoff-header { margin-bottom: 28px; }
+    .handoff-header h2 { font-size: 22px; font-weight: 800; color: var(--meta-dark); margin-bottom: 6px; }
+    .handoff-header p { font-size: 14px; color: var(--meta-muted); }
+    .handoff-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 32px; }
+    .handoff-stat { background: var(--white); border-radius: var(--radius-md); padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--meta-border); text-align: center; }
+    .handoff-stat-val { font-size: 32px; font-weight: 800; line-height: 1; margin-bottom: 6px; }
+    .handoff-stat-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; color: var(--meta-muted); }
+    .tier1-val { background: linear-gradient(135deg,#E53935,#FF7043); -webkit-background-clip:text; background-clip:text; color: transparent; }
+    .tier2-val { background: linear-gradient(135deg,#F5A623,#FFD166); -webkit-background-clip:text; background-clip:text; color: transparent; }
+    .tier3-val { background: linear-gradient(135deg,#0082FB,#00C6FF); -webkit-background-clip:text; background-clip:text; color: transparent; }
+    .tier4-val { background: linear-gradient(135deg,#9E9E9E,#BDBDBD); -webkit-background-clip:text; background-clip:text; color: transparent; }
+    .handoff-table-wrap { background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 1px solid var(--meta-border); overflow: hidden; margin-bottom: 32px; }
+    .handoff-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .handoff-table thead th { background: linear-gradient(135deg, #0064D2, #0082FB); color: white; padding: 14px 16px; text-align: left; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; white-space: nowrap; }
+    .handoff-table tbody tr { border-bottom: 1px solid var(--meta-border); transition: background var(--transition); }
+    .handoff-table tbody tr:last-child { border-bottom: none; }
+    .handoff-table tbody tr:hover { background: #F7F9FC; }
+    .handoff-table td { padding: 14px 16px; vertical-align: top; color: var(--meta-dark); line-height: 1.5; }
+    .handoff-table td.project-name { font-weight: 700; color: var(--meta-dark); min-width: 180px; }
+    .handoff-table td.project-name .ws-tag { display: inline-block; font-size: 10px; font-weight: 600; color: var(--meta-muted); background: var(--meta-bg); border-radius: 4px; padding: 2px 6px; margin-top: 4px; }
+    .tier-badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .3px; white-space: nowrap; }
+    .tier-1 { background: #FEECEC; color: #C0392B; }
+    .tier-2 { background: #FFF4E0; color: #B07200; }
+    .tier-3 { background: #E7F3FF; color: #0064D2; }
+    .tier-4 { background: #F3F3F3; color: #606770; }
+    .hs-badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+    .hs-not-started { background: #F3F3F3; color: #606770; }
+    .hs-planning    { background: #FFF4E0; color: #B07200; }
+    .hs-in-progress { background: #E7F3FF; color: #0064D2; }
+    .hs-handed-off  { background: #E8F5E9; color: #2E7D32; }
+    .hs-complete    { background: #E8F5E9; color: #1B5E20; }
+    .successor-chip { display: inline-flex; align-items: center; gap: 5px; background: linear-gradient(135deg,#E7F3FF,#F0F8FF); border: 1px solid rgba(0,130,251,.2); border-radius: 20px; padding: 4px 10px; font-size: 12px; font-weight: 600; color: #0064D2; white-space: nowrap; }
+    .successor-chip svg { width: 12px; height: 12px; }
+    .empty-cell { color: var(--meta-muted); font-style: italic; font-size: 12px; }
+    .kt-link { color: var(--meta-blue); font-weight: 600; text-decoration: none; font-size: 12px; }
+    .kt-link:hover { text-decoration: underline; }
+    .handoff-notes-cell { max-width: 200px; font-size: 12px; color: var(--meta-muted); }
+
     /* ─── Footer ────────────────────────────────────────────────── */
     .footer { text-align: center; padding: 24px 40px; font-size: 12px; color: var(--meta-muted); border-top: 1px solid var(--meta-border); background: var(--white); }
     .footer strong { color: var(--meta-blue); }
@@ -270,7 +316,11 @@
     </div>
     <span class="topnav-title">Contract <span>Intelligence</span></span>
   </div>
-  <span class="topnav-date">Executive Overview &nbsp;·&nbsp; <span id="navDate">April 2026</span></span>
+  <div class="view-toggle">
+    <button class="view-btn active" id="btnOverview" onclick="switchView('overview')">Executive Overview</button>
+    <button class="view-btn" id="btnHandoff" onclick="switchView('handoff')">Handoff Tracker</button>
+  </div>
+  <span class="topnav-date"><span id="navDate">April 2026</span></span>
 </nav>
 
 <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
@@ -477,6 +527,40 @@
 
 </main>
 
+<!-- ═══ HANDOFF VIEW ═══════════════════════════════════════════ -->
+<div id="handoffView">
+  <section class="hero" style="padding: 40px 40px 36px;">
+    <div class="hero-inner">
+      <div class="hero-label">Internal Operations</div>
+      <h1 style="font-size:clamp(22px,3vw,34px);">Project Handoff Tracker</h1>
+      <p class="hero-sub" style="font-size:15px;">Track the transition of ownership for each project to direct reports and stakeholders. Update via the connected Google Sheet.</p>
+    </div>
+  </section>
+  <div class="main">
+    <div class="handoff-stats" id="handoffStats"></div>
+    <div class="handoff-table-wrap">
+      <table class="handoff-table">
+        <thead>
+          <tr>
+            <th>Project</th>
+            <th>Priority</th>
+            <th>Handoff Status</th>
+            <th>Successor</th>
+            <th>Key Stakeholders</th>
+            <th>Next Milestone</th>
+            <th>Target Date</th>
+            <th>Dependencies</th>
+            <th>Open Blockers</th>
+            <th>KT Doc</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="handoffTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
 <!-- ─── Footer ───────────────────────────────────────────────── -->
 <footer class="footer">
   Prepared by <strong>Legal Technology</strong> &nbsp;·&nbsp; Contract Intelligence &amp; Automation &nbsp;·&nbsp; April 2026
@@ -608,7 +692,17 @@
       tags: row.tags || '',
       owner: row.owner || 'Legal Technology',
       link: row.project_link || row.link || '',
-      impact: row.business_impact || row.impact || ''
+      impact: row.business_impact || row.impact || '',
+      handoff_priority:    row.handoff_priority || '',
+      handoff_status:      row.handoff_status || 'Not Started',
+      successor:           row.successor || '',
+      key_stakeholders:    row.key_stakeholders || '',
+      next_milestone:      row.next_milestone || '',
+      dependencies:        row.dependencies || '',
+      open_blockers:       row.open_blockers || '',
+      kt_doc_link:         row.kt_doc_link || '',
+      handoff_target_date: row.handoff_target_date || '',
+      handoff_notes:       row.handoff_notes || ''
     };
   }
 
@@ -797,6 +891,8 @@
           document.getElementById('sheetLink').href = SHEET_CSV_URL.replace('/pub?', '/edit?').replace('output=csv', '');
           renderKPIs(allProjects);
           renderCards(allProjects);
+          // If handoff view is already open, render it now that data is ready
+          if (currentView === 'handoff') renderHandoffTable(allProjects);
           return;
         }
       } catch(e) {
@@ -807,6 +903,112 @@
     allProjects = FALLBACK_PROJECTS;
     renderKPIs(allProjects);
     renderCards(allProjects);
+    if (currentView === 'handoff') renderHandoffTable(allProjects);
+  }
+
+  // ─────────────────────────────────────────────────────────────────
+  // VIEW SWITCHER
+  // ─────────────────────────────────────────────────────────────────
+  let currentView = 'overview';
+
+  function switchView(view) {
+    currentView = view;
+    const overviewEl = document.querySelector('main');
+    const handoffEl  = document.getElementById('handoffView');
+    const btnO = document.getElementById('btnOverview');
+    const btnH = document.getElementById('btnHandoff');
+    if (view === 'overview') {
+      overviewEl.style.display = '';
+      handoffEl.style.display  = 'none';
+      btnO.classList.add('active');
+      btnH.classList.remove('active');
+    } else {
+      overviewEl.style.display = 'none';
+      handoffEl.style.display  = 'block';
+      btnH.classList.add('active');
+      btnO.classList.remove('active');
+      if (allProjects && allProjects.length > 0) {
+        renderHandoffTable(allProjects);
+      } else {
+        // Data still loading — show a spinner and wait
+        document.getElementById('handoffStats').innerHTML = '<div style="color:#606770;font-size:14px;padding:20px;">Loading project data…</div>';
+        document.getElementById('handoffTableBody').innerHTML = '<tr><td colspan="11" style="text-align:center;padding:40px;color:#606770;">Loading…</td></tr>';
+      }
+    }
+  }
+
+  // ─────────────────────────────────────────────────────────────────
+  // HANDOFF TABLE RENDERER
+  // ─────────────────────────────────────────────────────────────────
+  function renderHandoffTable(projects) {
+    // Stats
+    const tierCounts = { 'Tier 1': 0, 'Tier 2': 0, 'Tier 3': 0, 'Tier 4': 0 };
+    const hsCounts   = { 'Not Started': 0, 'In Planning': 0, 'In Progress': 0, 'Handed Off': 0, 'Complete': 0 };
+    projects.forEach(p => {
+      if (p.handoff_priority && tierCounts[p.handoff_priority] !== undefined) tierCounts[p.handoff_priority]++;
+      const hs = p.handoff_status || 'Not Started';
+      if (hsCounts[hs] !== undefined) hsCounts[hs]++; else hsCounts['Not Started']++;
+    });
+
+    const statsHtml = [
+      { label: 'Tier 1 — Urgent', val: tierCounts['Tier 1'], cls: 'tier1-val' },
+      { label: 'Tier 2 — High',   val: tierCounts['Tier 2'], cls: 'tier2-val' },
+      { label: 'Tier 3 — Medium', val: tierCounts['Tier 3'], cls: 'tier3-val' },
+      { label: 'Tier 4 — Low',    val: tierCounts['Tier 4'], cls: 'tier4-val' },
+      { label: 'Not Started',     val: hsCounts['Not Started'],  cls: 'tier4-val' },
+      { label: 'In Planning',     val: hsCounts['In Planning'],  cls: 'tier2-val' },
+      { label: 'In Progress',     val: hsCounts['In Progress'],  cls: 'tier3-val' },
+      { label: 'Handed Off',      val: hsCounts['Handed Off'],   cls: 'tier1-val' },
+      { label: 'Complete',        val: hsCounts['Complete'],     cls: '' }
+    ].map(s => `<div class="handoff-stat"><div class="handoff-stat-val ${s.cls}">${s.val}</div><div class="handoff-stat-label">${s.label}</div></div>`).join('');
+    document.getElementById('handoffStats').innerHTML = statsHtml;
+
+    // Tier badge helper
+    function tierBadge(t) {
+      const n = (t || '').replace(/[^1-4]/g,'');
+      const labels = { '1': 'Tier 1 — Urgent', '2': 'Tier 2 — High', '3': 'Tier 3 — Medium', '4': 'Tier 4 — Low' };
+      return `<span class="tier-badge tier-${n || '4'}">${labels[n] || t || '—'}</span>`;
+    }
+
+    // Handoff status badge helper
+    function hsBadge(s) {
+      const raw = (s || 'Not Started').toLowerCase().replace(/\s+/g,'-');
+      const clsMap = { 'not-started': 'hs-not-started', 'in-planning': 'hs-planning', 'in-progress': 'hs-in-progress', 'handed-off': 'hs-handed-off', 'complete': 'hs-complete' };
+      return `<span class="hs-badge ${clsMap[raw] || 'hs-not-started'}">${s || 'Not Started'}</span>`;
+    }
+
+    // Successor chip helper
+    function successorChip(s) {
+      if (!s) return '<span class="empty-cell">— Unassigned</span>';
+      return s.split(',').map(name => name.trim()).filter(Boolean).map(name =>
+        `<span class="successor-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>${name}</span>`
+      ).join(' ');
+    }
+
+    function cell(val) { return val ? val : '<span class="empty-cell">—</span>'; }
+
+    // Sort by tier priority then name
+    const sorted = [...projects].sort((a, b) => {
+      const ta = parseInt((a.handoff_priority || 'Tier 4').replace(/[^1-4]/g,'') || '4');
+      const tb = parseInt((b.handoff_priority || 'Tier 4').replace(/[^1-4]/g,'') || '4');
+      return ta !== tb ? ta - tb : a.name.localeCompare(b.name);
+    });
+
+    const rows = sorted.map(p => `<tr>
+      <td class="project-name">${p.name}<br><span class="ws-tag">${p.workstreamLabel}</span></td>
+      <td>${tierBadge(p.handoff_priority)}</td>
+      <td>${hsBadge(p.handoff_status)}</td>
+      <td>${successorChip(p.successor)}</td>
+      <td style="font-size:12px;">${cell(p.key_stakeholders)}</td>
+      <td style="font-size:12px;">${cell(p.next_milestone)}</td>
+      <td style="font-size:12px; white-space:nowrap;">${cell(p.handoff_target_date)}</td>
+      <td style="font-size:12px;">${cell(p.dependencies)}</td>
+      <td style="font-size:12px;">${cell(p.open_blockers)}</td>
+      <td>${p.kt_doc_link ? `<a class="kt-link" href="${p.kt_doc_link}" target="_blank">View Doc ↗</a>` : '<span class="empty-cell">—</span>'}</td>
+      <td class="handoff-notes-cell">${cell(p.handoff_notes)}</td>
+    </tr>`).join('');
+
+    document.getElementById('handoffTableBody').innerHTML = rows;
   }
 
   loadData();
