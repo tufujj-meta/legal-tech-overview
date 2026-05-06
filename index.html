@@ -649,22 +649,36 @@
   // CSV PARSER
   // ─────────────────────────────────────────────────────────────────
   function parseCSV(text) {
-    const lines = text.trim().split('\n');
+    // Normalize line endings (Windows CRLF -> LF)
+    const normalized = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+    const lines = normalized.trim().split('\n');
     if (lines.length < 2) return [];
-    const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, '').toLowerCase().replace(/\s+/g, '_'));
-    return lines.slice(1).map(line => {
-      // Handle quoted fields with commas
+
+    // Parse a single CSV line respecting quoted fields
+    function parseLine(line) {
       const fields = [];
       let current = '';
       let inQuotes = false;
       for (let i = 0; i < line.length; i++) {
-        if (line[i] === '"') { inQuotes = !inQuotes; }
-        else if (line[i] === ',' && !inQuotes) { fields.push(current.trim()); current = ''; }
-        else { current += line[i]; }
+        if (line[i] === '"') {
+          if (inQuotes && line[i+1] === '"') { current += '"'; i++; } // escaped quote
+          else { inQuotes = !inQuotes; }
+        } else if (line[i] === ',' && !inQuotes) {
+          fields.push(current.trim().replace(/^"|"$/g, ''));
+          current = '';
+        } else {
+          current += line[i];
+        }
       }
-      fields.push(current.trim());
+      fields.push(current.trim().replace(/^"|"$/g, ''));
+      return fields;
+    }
+
+    const headers = parseLine(lines[0]).map(h => h.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, ''));
+    return lines.slice(1).map(line => {
+      const fields = parseLine(line);
       const obj = {};
-      headers.forEach((h, i) => { obj[h] = (fields[i] || '').replace(/^"|"$/g, ''); });
+      headers.forEach((h, i) => { obj[h] = fields[i] || ''; });
       return obj;
     }).filter(row => row.name && row.name.trim() !== '');
   }
