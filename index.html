@@ -716,7 +716,8 @@
       open_blockers:       row.open_blockers || '',
       kt_doc_link:         row.kt_doc_link || '',
       handoff_target_date: row.handoff_target_date || '',
-      handoff_notes:       row.handoff_notes || ''
+      handoff_notes:       row.handoff_notes || '',
+      handoff_include:     (row.handoff_include || '').trim().toLowerCase()
     };
   }
 
@@ -955,6 +956,8 @@
   // HANDOFF TABLE RENDERER
   // ─────────────────────────────────────────────────────────────────
   function renderHandoffTable(projects) {
+    // Filter to only projects marked handoff_include = 'yes'
+    projects = projects.filter(p => p.handoff_include === 'yes');
     // Stats
     const tierCounts = { 'Tier 1': 0, 'Tier 2': 0, 'Tier 3': 0, 'Tier 4': 0 };
     const hsCounts   = { 'Not Started': 0, 'In Planning': 0, 'In Progress': 0, 'Handed Off': 0, 'Complete': 0 };
